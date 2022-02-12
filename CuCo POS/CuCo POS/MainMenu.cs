@@ -32,5 +32,10 @@ namespace CuCo_POS
         {
 
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
