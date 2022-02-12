@@ -2,9 +2,9 @@ D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Deb
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\CuCo POS.exe
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\CuCo POS.pdb
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.csproj.AssemblyReference.cache
-D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo_POS.Form1.resources
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo_POS.Properties.Resources.resources
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.csproj.GenerateResource.cache
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.csproj.CoreCompileInputs.cache
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.exe
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.pdb
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo_POS.MainMenu.resources
