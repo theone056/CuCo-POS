@@ -63,6 +63,26 @@ namespace CuCo_POS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap log_out {
+            get {
+                object obj = ResourceManager.GetObject("log_out", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap log_out2 {
+            get {
+                object obj = ResourceManager.GetObject("log_out2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menulist {
             get {
                 object obj = ResourceManager.GetObject("menulist", resourceCulture);
@@ -76,6 +96,26 @@ namespace CuCo_POS.Properties {
         internal static System.Drawing.Bitmap menulist2 {
             get {
                 object obj = ResourceManager.GetObject("menulist2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reports {
+            get {
+                object obj = ResourceManager.GetObject("reports", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reports2 {
+            get {
+                object obj = ResourceManager.GetObject("reports2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +176,26 @@ namespace CuCo_POS.Properties {
         internal static System.Drawing.Bitmap supplierlist2 {
             get {
                 object obj = ResourceManager.GetObject("supplierlist2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap userlist {
+            get {
+                object obj = ResourceManager.GetObject("userlist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap userlist2 {
+            get {
+                object obj = ResourceManager.GetObject("userlist2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

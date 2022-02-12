@@ -144,8 +144,11 @@ namespace CuCo_POS
             this.reports.Location = new System.Drawing.Point(500, 298);
             this.reports.Name = "reports";
             this.reports.Size = new System.Drawing.Size(249, 161);
+            this.reports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.reports.TabIndex = 8;
             this.reports.TabStop = false;
+            this.reports.MouseEnter += new System.EventHandler(this.reports_MouseEnter);
+            this.reports.MouseLeave += new System.EventHandler(this.reports_MouseLeave);
             // 
             // logout
             // 
@@ -155,9 +158,11 @@ namespace CuCo_POS
             this.logout.Location = new System.Drawing.Point(813, 298);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(249, 161);
+            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logout.TabIndex = 8;
             this.logout.TabStop = false;
-            this.logout.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.logout.MouseEnter += new System.EventHandler(this.logout_MouseEnter);
+            this.logout.MouseLeave += new System.EventHandler(this.logout_MouseLeave);
             // 
             // userList
             // 
@@ -167,8 +172,11 @@ namespace CuCo_POS
             this.userList.Location = new System.Drawing.Point(180, 298);
             this.userList.Name = "userList";
             this.userList.Size = new System.Drawing.Size(249, 161);
+            this.userList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.userList.TabIndex = 7;
             this.userList.TabStop = false;
+            this.userList.MouseEnter += new System.EventHandler(this.userList_MouseEnter);
+            this.userList.MouseLeave += new System.EventHandler(this.userList_MouseLeave);
             // 
             // stockList
             // 

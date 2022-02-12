@@ -33,10 +33,6 @@ namespace CuCo_POS
 
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void salesRegister_MouseEnter(object sender, EventArgs e)
         {
@@ -76,6 +72,36 @@ namespace CuCo_POS
         private void supplierList_MouseLeave(object sender, EventArgs e)
         {
             this.supplierList.BackgroundImage = ((Image)Properties.Resources.supplierlist);
+        }
+
+        private void userList_MouseEnter(object sender, EventArgs e)
+        {
+            this.userList.BackgroundImage = ((Image)Properties.Resources.userlist2);
+        }
+
+        private void userList_MouseLeave(object sender, EventArgs e)
+        {
+            this.userList.BackgroundImage = ((Image)Properties.Resources.userlist);
+        }
+
+        private void reports_MouseEnter(object sender, EventArgs e)
+        {
+            this.reports.BackgroundImage = ((Image)Properties.Resources.reports2);
+        }
+
+        private void reports_MouseLeave(object sender, EventArgs e)
+        {
+            this.reports.BackgroundImage = ((Image)Properties.Resources.reports);
+        }
+
+        private void logout_MouseEnter(object sender, EventArgs e)
+        {
+            this.logout.BackgroundImage = ((Image)Properties.Resources.log_out2);
+        }
+
+        private void logout_MouseLeave(object sender, EventArgs e)
+        {
+            this.logout.BackgroundImage = ((Image)Properties.Resources.log_out);
         }
     }
 }

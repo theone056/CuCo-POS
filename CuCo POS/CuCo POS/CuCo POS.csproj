@@ -104,5 +104,23 @@
   <ItemGroup>
     <None Include="Resources\supplierlist.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userlist2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_out2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_out.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
