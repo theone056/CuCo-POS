@@ -44,6 +44,11 @@ namespace CuCo_POS
             this.supplierList = new System.Windows.Forms.PictureBox();
             this.MenuList = new System.Windows.Forms.PictureBox();
             this.salesRegister = new System.Windows.Forms.PictureBox();
+            this.menuListContainer = new System.Windows.Forms.Panel();
+            this.headerMenuListContainer = new System.Windows.Forms.Panel();
+            this.bodyMenuListContainer = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.MenuListLabel = new System.Windows.Forms.Label();
             this.headerContainerMenu.SuspendLayout();
             this.parentContainer.SuspendLayout();
             this.BodyContainerMenu.SuspendLayout();
@@ -54,6 +59,9 @@ namespace CuCo_POS
             ((System.ComponentModel.ISupportInitialize)(this.supplierList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesRegister)).BeginInit();
+            this.menuListContainer.SuspendLayout();
+            this.headerMenuListContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // headerContainerMenu
@@ -65,9 +73,9 @@ namespace CuCo_POS
             this.headerContainerMenu.Controls.Add(this.label2);
             this.headerContainerMenu.Controls.Add(this.titleLabel);
             this.headerContainerMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerContainerMenu.Location = new System.Drawing.Point(0, 0);
+            this.headerContainerMenu.Location = new System.Drawing.Point(5, 5);
             this.headerContainerMenu.Name = "headerContainerMenu";
-            this.headerContainerMenu.Size = new System.Drawing.Size(1288, 100);
+            this.headerContainerMenu.Size = new System.Drawing.Size(1278, 100);
             this.headerContainerMenu.TabIndex = 0;
             // 
             // timeLabel
@@ -75,7 +83,7 @@ namespace CuCo_POS
             this.timeLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(809, 63);
+            this.timeLabel.Location = new System.Drawing.Point(799, 63);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(349, 23);
             this.timeLabel.TabIndex = 3;
@@ -86,7 +94,7 @@ namespace CuCo_POS
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(30)))), ((int)(((byte)(66)))));
-            this.label1.Location = new System.Drawing.Point(561, 90);
+            this.label1.Location = new System.Drawing.Point(551, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(597, 10);
             this.label1.TabIndex = 4;
@@ -115,11 +123,12 @@ namespace CuCo_POS
             this.parentContainer.BackColor = System.Drawing.Color.Transparent;
             this.parentContainer.Controls.Add(this.BodyContainerMenu);
             this.parentContainer.Controls.Add(this.headerContainerMenu);
-            this.parentContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parentContainer.Location = new System.Drawing.Point(0, 0);
+            this.parentContainer.Location = new System.Drawing.Point(23, 170);
             this.parentContainer.Name = "parentContainer";
+            this.parentContainer.Padding = new System.Windows.Forms.Padding(5);
             this.parentContainer.Size = new System.Drawing.Size(1288, 581);
             this.parentContainer.TabIndex = 5;
+            this.parentContainer.Visible = false;
             // 
             // BodyContainerMenu
             // 
@@ -131,9 +140,9 @@ namespace CuCo_POS
             this.BodyContainerMenu.Controls.Add(this.MenuList);
             this.BodyContainerMenu.Controls.Add(this.salesRegister);
             this.BodyContainerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BodyContainerMenu.Location = new System.Drawing.Point(0, 100);
+            this.BodyContainerMenu.Location = new System.Drawing.Point(5, 105);
             this.BodyContainerMenu.Name = "BodyContainerMenu";
-            this.BodyContainerMenu.Size = new System.Drawing.Size(1288, 481);
+            this.BodyContainerMenu.Size = new System.Drawing.Size(1278, 471);
             this.BodyContainerMenu.TabIndex = 1;
             // 
             // reports
@@ -141,7 +150,7 @@ namespace CuCo_POS
             this.reports.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.reports.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reports.BackgroundImage")));
             this.reports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.reports.Location = new System.Drawing.Point(500, 298);
+            this.reports.Location = new System.Drawing.Point(495, 298);
             this.reports.Name = "reports";
             this.reports.Size = new System.Drawing.Size(249, 161);
             this.reports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -155,7 +164,7 @@ namespace CuCo_POS
             this.logout.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.logout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout.BackgroundImage")));
             this.logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.logout.Location = new System.Drawing.Point(813, 298);
+            this.logout.Location = new System.Drawing.Point(808, 298);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(249, 161);
             this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -170,7 +179,7 @@ namespace CuCo_POS
             this.userList.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.userList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userList.BackgroundImage")));
             this.userList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userList.Location = new System.Drawing.Point(180, 298);
+            this.userList.Location = new System.Drawing.Point(175, 298);
             this.userList.Name = "userList";
             this.userList.Size = new System.Drawing.Size(249, 161);
             this.userList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -184,7 +193,7 @@ namespace CuCo_POS
             this.stockList.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.stockList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stockList.BackgroundImage")));
             this.stockList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.stockList.Location = new System.Drawing.Point(634, 74);
+            this.stockList.Location = new System.Drawing.Point(629, 74);
             this.stockList.Name = "stockList";
             this.stockList.Size = new System.Drawing.Size(249, 161);
             this.stockList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +207,7 @@ namespace CuCo_POS
             this.supplierList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.supplierList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("supplierList.BackgroundImage")));
             this.supplierList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.supplierList.Location = new System.Drawing.Point(899, 74);
+            this.supplierList.Location = new System.Drawing.Point(889, 74);
             this.supplierList.Name = "supplierList";
             this.supplierList.Size = new System.Drawing.Size(249, 161);
             this.supplierList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -212,7 +221,7 @@ namespace CuCo_POS
             this.MenuList.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MenuList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MenuList.BackgroundImage")));
             this.MenuList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MenuList.Location = new System.Drawing.Point(361, 74);
+            this.MenuList.Location = new System.Drawing.Point(356, 74);
             this.MenuList.Name = "MenuList";
             this.MenuList.Size = new System.Drawing.Size(249, 161);
             this.MenuList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -234,6 +243,62 @@ namespace CuCo_POS
             this.salesRegister.MouseEnter += new System.EventHandler(this.salesRegister_MouseEnter);
             this.salesRegister.MouseLeave += new System.EventHandler(this.salesRegister_MouseLeave);
             // 
+            // menuListContainer
+            // 
+            this.menuListContainer.BackColor = System.Drawing.Color.Transparent;
+            this.menuListContainer.BackgroundImage = global::CuCo_POS.Properties.Resources.background;
+            this.menuListContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuListContainer.Controls.Add(this.bodyMenuListContainer);
+            this.menuListContainer.Controls.Add(this.headerMenuListContainer);
+            this.menuListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuListContainer.Location = new System.Drawing.Point(0, 0);
+            this.menuListContainer.Name = "menuListContainer";
+            this.menuListContainer.Padding = new System.Windows.Forms.Padding(5);
+            this.menuListContainer.Size = new System.Drawing.Size(1288, 581);
+            this.menuListContainer.TabIndex = 6;
+            // 
+            // headerMenuListContainer
+            // 
+            this.headerMenuListContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(30)))), ((int)(((byte)(66)))));
+            this.headerMenuListContainer.Controls.Add(this.MenuListLabel);
+            this.headerMenuListContainer.Controls.Add(this.pictureBox1);
+            this.headerMenuListContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerMenuListContainer.Location = new System.Drawing.Point(5, 5);
+            this.headerMenuListContainer.Name = "headerMenuListContainer";
+            this.headerMenuListContainer.Size = new System.Drawing.Size(1278, 108);
+            this.headerMenuListContainer.TabIndex = 0;
+            // 
+            // bodyMenuListContainer
+            // 
+            this.bodyMenuListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bodyMenuListContainer.Location = new System.Drawing.Point(5, 113);
+            this.bodyMenuListContainer.Name = "bodyMenuListContainer";
+            this.bodyMenuListContainer.Size = new System.Drawing.Size(1278, 463);
+            this.bodyMenuListContainer.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(114, 97);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // MenuListLabel
+            // 
+            this.MenuListLabel.AutoSize = true;
+            this.MenuListLabel.Font = new System.Drawing.Font("Gill Sans MT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuListLabel.ForeColor = System.Drawing.Color.White;
+            this.MenuListLabel.Location = new System.Drawing.Point(135, 34);
+            this.MenuListLabel.Name = "MenuListLabel";
+            this.MenuListLabel.Size = new System.Drawing.Size(126, 52);
+            this.MenuListLabel.TabIndex = 1;
+            this.MenuListLabel.Text = "MENU";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,6 +308,7 @@ namespace CuCo_POS
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1288, 581);
             this.ControlBox = false;
+            this.Controls.Add(this.menuListContainer);
             this.Controls.Add(this.parentContainer);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -264,6 +330,10 @@ namespace CuCo_POS
             ((System.ComponentModel.ISupportInitialize)(this.supplierList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesRegister)).EndInit();
+            this.menuListContainer.ResumeLayout(false);
+            this.headerMenuListContainer.ResumeLayout(false);
+            this.headerMenuListContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -284,6 +354,11 @@ namespace CuCo_POS
         private System.Windows.Forms.PictureBox reports;
         private System.Windows.Forms.PictureBox logout;
         private System.Windows.Forms.PictureBox userList;
+        private System.Windows.Forms.Panel menuListContainer;
+        private System.Windows.Forms.Panel bodyMenuListContainer;
+        private System.Windows.Forms.Panel headerMenuListContainer;
+        private System.Windows.Forms.Label MenuListLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

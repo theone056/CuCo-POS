@@ -108,5 +108,10 @@ namespace CuCo_POS
         {
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
