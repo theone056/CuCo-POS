@@ -15,6 +15,7 @@ namespace CuCo_POS
         public MainMenu()
         {
             InitializeComponent();
+            timeLabel.Text = DateTime.Now.ToLongDateString() + ", " + DateTime.Now.ToLongTimeString();
         }
 
         private void MainMenu_Load(object sender, EventArgs e)
