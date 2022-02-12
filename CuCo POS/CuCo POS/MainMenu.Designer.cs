@@ -161,6 +161,7 @@ namespace CuCo_POS
             this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logout.TabIndex = 8;
             this.logout.TabStop = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
             this.logout.MouseEnter += new System.EventHandler(this.logout_MouseEnter);
             this.logout.MouseLeave += new System.EventHandler(this.logout_MouseLeave);
             // 

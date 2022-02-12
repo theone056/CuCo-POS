@@ -103,5 +103,10 @@ namespace CuCo_POS
         {
             this.logout.BackgroundImage = ((Image)Properties.Resources.log_out);
         }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
