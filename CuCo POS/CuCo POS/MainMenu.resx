@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="reports.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAWYAAAD3CAYAAAAua/5EAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAX
         EQAAFxEByibzPwAAKJ5JREFUeF7tnXl8VNXd//v099fz/H6PbX8qVVurrUWrPm3d6r6xo1VbN6RuRRHq
@@ -297,7 +297,7 @@
         xY/sy8kC7xV9CIIgCIIgCIIgCIIgCIIgCNJj+c53/j851b/LMHwxiAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="logout.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAWUAAAD1CAYAAACIlORMAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAX
         EQAAFxEByibzPwAAGQRJREFUeF7tnXuQVNWdgC2rtrb2rzzVRCCabMxKXJNU5eEDFBBQEfAR3+8ElQ3B
@@ -410,7 +410,7 @@
         eA1h/Y94AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="userList.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAWsAAAD3CAYAAADblXX0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAX
         EQAAFxEByibzPwAASGpJREFUeF7tnWd4VFeS9/fZD++33dl3J8+u3wm7s7OzYXZmdsbjiAPGg3O2ccI4
@@ -725,7 +725,7 @@
         VCqVSqUaMPqbv/n/DAyaVcnYpDwAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="stockList.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAWQAAAD5CAYAAAAQlE8JAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAX
         EQAAFxEByibzPwAAKwFJREFUeF7tnXl4HMWdhnny1/612Wy4EsICyebOJmzCbQM24jIxBocbAjaBmHAY
@@ -915,7 +915,7 @@
         QmCC
 </value>
   </data>
-  <data name="pictureBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="supplierList.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAWQAAAD6CAYAAACWAD2nAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAX
         EQAAFxEByibzPwAAI69JREFUeF7tnXmUFdW5t1354/vzrvslGqORTxOnmEHvzWAEQUEUUXEgTtEQh2BY

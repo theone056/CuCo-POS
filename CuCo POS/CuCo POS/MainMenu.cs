@@ -37,5 +37,45 @@ namespace CuCo_POS
         {
 
         }
+
+        private void salesRegister_MouseEnter(object sender, EventArgs e)
+        {
+            this.salesRegister.BackgroundImage = ((System.Drawing.Image)Properties.Resources.salesregister2);
+        }
+
+        private void salesRegister_MouseLeave(object sender, EventArgs e)
+        {
+            this.salesRegister.BackgroundImage = ((System.Drawing.Image)Properties.Resources.salesregister);
+        }
+
+        private void MenuList_MouseEnter(object sender, EventArgs e)
+        {
+            this.MenuList.BackgroundImage = ((Image)Properties.Resources.menulist2);
+        }
+
+        private void MenuList_MouseLeave(object sender, EventArgs e)
+        {
+            this.MenuList.BackgroundImage = ((Image)Properties.Resources.menulist);
+        }
+
+        private void stockList_MouseEnter(object sender, EventArgs e)
+        {
+            this.stockList.BackgroundImage = ((Image)Properties.Resources.stocklist2);
+        }
+
+        private void stockList_MouseLeave(object sender, EventArgs e)
+        {
+            this.stockList.BackgroundImage = ((Image)Properties.Resources.stocklist);
+        }
+
+        private void supplierList_MouseEnter(object sender, EventArgs e)
+        {
+            this.supplierList.BackgroundImage = ((Image)Properties.Resources.supplierlist2);
+        }
+
+        private void supplierList_MouseLeave(object sender, EventArgs e)
+        {
+            this.supplierList.BackgroundImage = ((Image)Properties.Resources.supplierlist);
+        }
     }
 }
