@@ -44,11 +44,11 @@ namespace CuCo_POS
             this.supplierList = new System.Windows.Forms.PictureBox();
             this.MenuList = new System.Windows.Forms.PictureBox();
             this.salesRegister = new System.Windows.Forms.PictureBox();
-            this.menuListContainer = new System.Windows.Forms.Panel();
-            this.headerMenuListContainer = new System.Windows.Forms.Panel();
-            this.bodyMenuListContainer = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.MenuListLabel = new System.Windows.Forms.Label();
+            this.CashRegisterContainer = new System.Windows.Forms.Panel();
+            this.headerCashRegisterContainer = new System.Windows.Forms.Panel();
+            this.bodyCashRegisterContainer = new System.Windows.Forms.Panel();
+            this.CashRegisterLabel = new System.Windows.Forms.Label();
+            this.CashRegisterLabelDate = new System.Windows.Forms.Label();
             this.headerContainerMenu.SuspendLayout();
             this.parentContainer.SuspendLayout();
             this.BodyContainerMenu.SuspendLayout();
@@ -59,9 +59,8 @@ namespace CuCo_POS
             ((System.ComponentModel.ISupportInitialize)(this.supplierList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesRegister)).BeginInit();
-            this.menuListContainer.SuspendLayout();
-            this.headerMenuListContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.CashRegisterContainer.SuspendLayout();
+            this.headerCashRegisterContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // headerContainerMenu
@@ -123,7 +122,7 @@ namespace CuCo_POS
             this.parentContainer.BackColor = System.Drawing.Color.Transparent;
             this.parentContainer.Controls.Add(this.BodyContainerMenu);
             this.parentContainer.Controls.Add(this.headerContainerMenu);
-            this.parentContainer.Location = new System.Drawing.Point(23, 170);
+            this.parentContainer.Location = new System.Drawing.Point(23, 73);
             this.parentContainer.Name = "parentContainer";
             this.parentContainer.Padding = new System.Windows.Forms.Padding(5);
             this.parentContainer.Size = new System.Drawing.Size(1288, 581);
@@ -243,61 +242,65 @@ namespace CuCo_POS
             this.salesRegister.MouseEnter += new System.EventHandler(this.salesRegister_MouseEnter);
             this.salesRegister.MouseLeave += new System.EventHandler(this.salesRegister_MouseLeave);
             // 
-            // menuListContainer
+            // CashRegisterContainer
             // 
-            this.menuListContainer.BackColor = System.Drawing.Color.Transparent;
-            this.menuListContainer.BackgroundImage = global::CuCo_POS.Properties.Resources.background;
-            this.menuListContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuListContainer.Controls.Add(this.bodyMenuListContainer);
-            this.menuListContainer.Controls.Add(this.headerMenuListContainer);
-            this.menuListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuListContainer.Location = new System.Drawing.Point(0, 0);
-            this.menuListContainer.Name = "menuListContainer";
-            this.menuListContainer.Padding = new System.Windows.Forms.Padding(5);
-            this.menuListContainer.Size = new System.Drawing.Size(1288, 581);
-            this.menuListContainer.TabIndex = 6;
+            this.CashRegisterContainer.BackColor = System.Drawing.Color.Transparent;
+            this.CashRegisterContainer.BackgroundImage = global::CuCo_POS.Properties.Resources.background;
+            this.CashRegisterContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CashRegisterContainer.Controls.Add(this.bodyCashRegisterContainer);
+            this.CashRegisterContainer.Controls.Add(this.headerCashRegisterContainer);
+            this.CashRegisterContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CashRegisterContainer.Location = new System.Drawing.Point(0, 0);
+            this.CashRegisterContainer.Name = "CashRegisterContainer";
+            this.CashRegisterContainer.Padding = new System.Windows.Forms.Padding(5);
+            this.CashRegisterContainer.Size = new System.Drawing.Size(1288, 581);
+            this.CashRegisterContainer.TabIndex = 6;
+            this.CashRegisterContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.menuListContainer_Paint);
             // 
-            // headerMenuListContainer
+            // headerCashRegisterContainer
             // 
-            this.headerMenuListContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(30)))), ((int)(((byte)(66)))));
-            this.headerMenuListContainer.Controls.Add(this.MenuListLabel);
-            this.headerMenuListContainer.Controls.Add(this.pictureBox1);
-            this.headerMenuListContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerMenuListContainer.Location = new System.Drawing.Point(5, 5);
-            this.headerMenuListContainer.Name = "headerMenuListContainer";
-            this.headerMenuListContainer.Size = new System.Drawing.Size(1278, 108);
-            this.headerMenuListContainer.TabIndex = 0;
+            this.headerCashRegisterContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(21)))), ((int)(((byte)(48)))));
+            this.headerCashRegisterContainer.Controls.Add(this.CashRegisterLabelDate);
+            this.headerCashRegisterContainer.Controls.Add(this.CashRegisterLabel);
+            this.headerCashRegisterContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerCashRegisterContainer.Location = new System.Drawing.Point(5, 5);
+            this.headerCashRegisterContainer.Name = "headerCashRegisterContainer";
+            this.headerCashRegisterContainer.Size = new System.Drawing.Size(1278, 34);
+            this.headerCashRegisterContainer.TabIndex = 0;
             // 
-            // bodyMenuListContainer
+            // bodyCashRegisterContainer
             // 
-            this.bodyMenuListContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bodyMenuListContainer.Location = new System.Drawing.Point(5, 113);
-            this.bodyMenuListContainer.Name = "bodyMenuListContainer";
-            this.bodyMenuListContainer.Size = new System.Drawing.Size(1278, 463);
-            this.bodyMenuListContainer.TabIndex = 1;
+            this.bodyCashRegisterContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(29)))), ((int)(((byte)(65)))));
+            this.bodyCashRegisterContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bodyCashRegisterContainer.ForeColor = System.Drawing.Color.White;
+            this.bodyCashRegisterContainer.Location = new System.Drawing.Point(5, 39);
+            this.bodyCashRegisterContainer.Name = "bodyCashRegisterContainer";
+            this.bodyCashRegisterContainer.Size = new System.Drawing.Size(1278, 537);
+            this.bodyCashRegisterContainer.TabIndex = 1;
             // 
-            // pictureBox1
+            // CashRegisterLabel
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.CashRegisterLabel.AutoSize = true;
+            this.CashRegisterLabel.Font = new System.Drawing.Font("Gill Sans MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CashRegisterLabel.ForeColor = System.Drawing.Color.White;
+            this.CashRegisterLabel.Location = new System.Drawing.Point(1, -3);
+            this.CashRegisterLabel.Name = "CashRegisterLabel";
+            this.CashRegisterLabel.Size = new System.Drawing.Size(191, 38);
+            this.CashRegisterLabel.TabIndex = 1;
+            this.CashRegisterLabel.Text = "Cashier: Derick";
             // 
-            // MenuListLabel
+            // CashRegisterLabelDate
             // 
-            this.MenuListLabel.AutoSize = true;
-            this.MenuListLabel.Font = new System.Drawing.Font("Gill Sans MT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuListLabel.ForeColor = System.Drawing.Color.White;
-            this.MenuListLabel.Location = new System.Drawing.Point(135, 34);
-            this.MenuListLabel.Name = "MenuListLabel";
-            this.MenuListLabel.Size = new System.Drawing.Size(126, 52);
-            this.MenuListLabel.TabIndex = 1;
-            this.MenuListLabel.Text = "MENU";
+            this.CashRegisterLabelDate.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.CashRegisterLabelDate.AutoSize = true;
+            this.CashRegisterLabelDate.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CashRegisterLabelDate.ForeColor = System.Drawing.SystemColors.Control;
+            this.CashRegisterLabelDate.Location = new System.Drawing.Point(929, 8);
+            this.CashRegisterLabelDate.Name = "CashRegisterLabelDate";
+            this.CashRegisterLabelDate.Size = new System.Drawing.Size(349, 23);
+            this.CashRegisterLabelDate.TabIndex = 4;
+            this.CashRegisterLabelDate.Text = "SATURDAY, FEBRUARY 12, 2022, 11:30 AM";
+            this.CashRegisterLabelDate.Click += new System.EventHandler(this.label3_Click);
             // 
             // MainMenu
             // 
@@ -308,7 +311,7 @@ namespace CuCo_POS
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1288, 581);
             this.ControlBox = false;
-            this.Controls.Add(this.menuListContainer);
+            this.Controls.Add(this.CashRegisterContainer);
             this.Controls.Add(this.parentContainer);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -330,10 +333,9 @@ namespace CuCo_POS
             ((System.ComponentModel.ISupportInitialize)(this.supplierList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesRegister)).EndInit();
-            this.menuListContainer.ResumeLayout(false);
-            this.headerMenuListContainer.ResumeLayout(false);
-            this.headerMenuListContainer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.CashRegisterContainer.ResumeLayout(false);
+            this.headerCashRegisterContainer.ResumeLayout(false);
+            this.headerCashRegisterContainer.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -354,11 +356,11 @@ namespace CuCo_POS
         private System.Windows.Forms.PictureBox reports;
         private System.Windows.Forms.PictureBox logout;
         private System.Windows.Forms.PictureBox userList;
-        private System.Windows.Forms.Panel menuListContainer;
-        private System.Windows.Forms.Panel bodyMenuListContainer;
-        private System.Windows.Forms.Panel headerMenuListContainer;
-        private System.Windows.Forms.Label MenuListLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel CashRegisterContainer;
+        private System.Windows.Forms.Panel bodyCashRegisterContainer;
+        private System.Windows.Forms.Panel headerCashRegisterContainer;
+        private System.Windows.Forms.Label CashRegisterLabel;
+        private System.Windows.Forms.Label CashRegisterLabelDate;
     }
 }
 

@@ -56,6 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBContext\POSContext.cs" />
+    <Compile Include="Entities\Discount.cs" />
+    <Compile Include="Entities\EmployeeList.cs" />
+    <Compile Include="Entities\ItemInventory.cs" />
+    <Compile Include="Entities\ItemUnit.cs" />
+    <Compile Include="Entities\MenuList.cs" />
+    <Compile Include="Entities\MenuType.cs" />
+    <Compile Include="Entities\PaymentType.cs" />
+    <Compile Include="Entities\SupplierList.cs" />
+    <Compile Include="Entities\UserList.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repo\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
