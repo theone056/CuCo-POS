@@ -17,16 +17,12 @@ namespace CuCo_POS
         // If you wish to target a different database and/or database provider, modify the 'CuCoPOS' 
         // connection string in the application configuration file.
         public CuCoPOS()
-            : base("name=CuCoPOS")
+            : base("CuCoPOS")
         {
         }
 
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-        }
         public DbSet<MenuList> MenuLists { get; set; }
         public DbSet<SupplierList> SupplierLists { get; set; }
         public DbSet<ItemInventory> ItemInventories { get; set; }

@@ -1,12 +1,6 @@
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\CuCo POS.exe.config
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\CuCo POS.exe
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\CuCo POS.pdb
-D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo_POS.Properties.Resources.resources
-D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.csproj.GenerateResource.cache
-D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.csproj.CoreCompileInputs.cache
-D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.exe
-D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.pdb
-D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo_POS.MainMenu.resources
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\BouncyCastle.Crypto.dll
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\EntityFramework.dll
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\EntityFramework.SqlServer.dll
@@ -15,6 +9,7 @@ D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Deb
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\K4os.Compression.LZ4.Streams.dll
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\K4os.Hash.xxHash.dll
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\MySql.Data.dll
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\mysql.data.entity.EF6.dll
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\MySql.Data.EntityFramework.dll
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\System.Buffers.dll
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\System.Memory.dll
@@ -35,4 +30,10 @@ D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Deb
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\System.Memory.xml
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\System.Numerics.Vectors.xml
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo_POS.MainMenu.resources
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo_POS.Properties.Resources.resources
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.csproj.GenerateResource.cache
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.csproj.CoreCompileInputs.cache
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.csproj.CopyComplete
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.exe
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.pdb
