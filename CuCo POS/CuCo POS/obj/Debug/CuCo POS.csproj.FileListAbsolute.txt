@@ -37,3 +37,4 @@ D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Deb
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.csproj.CopyComplete
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.exe
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.pdb
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.csproj.AssemblyReference.cache

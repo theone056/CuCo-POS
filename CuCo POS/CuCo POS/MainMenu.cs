@@ -123,5 +123,15 @@ namespace CuCo_POS
         {
 
         }
+
+        private void headerCashRegisterContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bodyCashRegisterContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

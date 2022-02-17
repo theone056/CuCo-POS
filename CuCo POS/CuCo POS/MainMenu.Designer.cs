@@ -45,10 +45,17 @@ namespace CuCo_POS
             this.MenuList = new System.Windows.Forms.PictureBox();
             this.salesRegister = new System.Windows.Forms.PictureBox();
             this.CashRegisterContainer = new System.Windows.Forms.Panel();
-            this.headerCashRegisterContainer = new System.Windows.Forms.Panel();
             this.bodyCashRegisterContainer = new System.Windows.Forms.Panel();
-            this.CashRegisterLabel = new System.Windows.Forms.Label();
+            this.headerCashRegisterContainer = new System.Windows.Forms.Panel();
             this.CashRegisterLabelDate = new System.Windows.Forms.Label();
+            this.CashRegisterLabel = new System.Windows.Forms.Label();
+            this.MenuContainer = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.headerContainerMenu.SuspendLayout();
             this.parentContainer.SuspendLayout();
             this.BodyContainerMenu.SuspendLayout();
@@ -60,7 +67,10 @@ namespace CuCo_POS
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesRegister)).BeginInit();
             this.CashRegisterContainer.SuspendLayout();
+            this.bodyCashRegisterContainer.SuspendLayout();
             this.headerCashRegisterContainer.SuspendLayout();
+            this.MenuContainer.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // headerContainerMenu
@@ -257,6 +267,19 @@ namespace CuCo_POS
             this.CashRegisterContainer.TabIndex = 6;
             this.CashRegisterContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.menuListContainer_Paint);
             // 
+            // bodyCashRegisterContainer
+            // 
+            this.bodyCashRegisterContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(29)))), ((int)(((byte)(65)))));
+            this.bodyCashRegisterContainer.Controls.Add(this.panel1);
+            this.bodyCashRegisterContainer.Controls.Add(this.MenuContainer);
+            this.bodyCashRegisterContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bodyCashRegisterContainer.ForeColor = System.Drawing.Color.White;
+            this.bodyCashRegisterContainer.Location = new System.Drawing.Point(5, 39);
+            this.bodyCashRegisterContainer.Name = "bodyCashRegisterContainer";
+            this.bodyCashRegisterContainer.Size = new System.Drawing.Size(1278, 537);
+            this.bodyCashRegisterContainer.TabIndex = 1;
+            this.bodyCashRegisterContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.bodyCashRegisterContainer_Paint);
+            // 
             // headerCashRegisterContainer
             // 
             this.headerCashRegisterContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(21)))), ((int)(((byte)(48)))));
@@ -267,27 +290,7 @@ namespace CuCo_POS
             this.headerCashRegisterContainer.Name = "headerCashRegisterContainer";
             this.headerCashRegisterContainer.Size = new System.Drawing.Size(1278, 34);
             this.headerCashRegisterContainer.TabIndex = 0;
-            // 
-            // bodyCashRegisterContainer
-            // 
-            this.bodyCashRegisterContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(29)))), ((int)(((byte)(65)))));
-            this.bodyCashRegisterContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bodyCashRegisterContainer.ForeColor = System.Drawing.Color.White;
-            this.bodyCashRegisterContainer.Location = new System.Drawing.Point(5, 39);
-            this.bodyCashRegisterContainer.Name = "bodyCashRegisterContainer";
-            this.bodyCashRegisterContainer.Size = new System.Drawing.Size(1278, 537);
-            this.bodyCashRegisterContainer.TabIndex = 1;
-            // 
-            // CashRegisterLabel
-            // 
-            this.CashRegisterLabel.AutoSize = true;
-            this.CashRegisterLabel.Font = new System.Drawing.Font("Gill Sans MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CashRegisterLabel.ForeColor = System.Drawing.Color.White;
-            this.CashRegisterLabel.Location = new System.Drawing.Point(1, -3);
-            this.CashRegisterLabel.Name = "CashRegisterLabel";
-            this.CashRegisterLabel.Size = new System.Drawing.Size(191, 38);
-            this.CashRegisterLabel.TabIndex = 1;
-            this.CashRegisterLabel.Text = "Cashier: Derick";
+            this.headerCashRegisterContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.headerCashRegisterContainer_Paint);
             // 
             // CashRegisterLabelDate
             // 
@@ -301,6 +304,88 @@ namespace CuCo_POS
             this.CashRegisterLabelDate.TabIndex = 4;
             this.CashRegisterLabelDate.Text = "SATURDAY, FEBRUARY 12, 2022, 11:30 AM";
             this.CashRegisterLabelDate.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // CashRegisterLabel
+            // 
+            this.CashRegisterLabel.AutoSize = true;
+            this.CashRegisterLabel.Font = new System.Drawing.Font("Gill Sans MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CashRegisterLabel.ForeColor = System.Drawing.Color.White;
+            this.CashRegisterLabel.Location = new System.Drawing.Point(1, -3);
+            this.CashRegisterLabel.Name = "CashRegisterLabel";
+            this.CashRegisterLabel.Size = new System.Drawing.Size(191, 38);
+            this.CashRegisterLabel.TabIndex = 1;
+            this.CashRegisterLabel.Text = "Cashier: Derick";
+            // 
+            // MenuContainer
+            // 
+            this.MenuContainer.Controls.Add(this.panel2);
+            this.MenuContainer.Controls.Add(this.flowLayoutPanel1);
+            this.MenuContainer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MenuContainer.Location = new System.Drawing.Point(0, 0);
+            this.MenuContainer.Name = "MenuContainer";
+            this.MenuContainer.Size = new System.Drawing.Size(646, 537);
+            this.MenuContainer.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(660, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(618, 537);
+            this.panel1.TabIndex = 1;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 66);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(620, 464);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(76)))), ((int)(((byte)(112)))));
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Location = new System.Drawing.Point(8, 6);
+            this.panel2.Margin = new System.Windows.Forms.Padding(20);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(618, 47);
+            this.panel2.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(76)))), ((int)(((byte)(112)))));
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(8, 10);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(176, 28);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(260, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 25);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Search";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(113)))), ((int)(((byte)(141)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(352, 7);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(253, 34);
+            this.textBox1.TabIndex = 2;
             // 
             // MainMenu
             // 
@@ -334,8 +419,12 @@ namespace CuCo_POS
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesRegister)).EndInit();
             this.CashRegisterContainer.ResumeLayout(false);
+            this.bodyCashRegisterContainer.ResumeLayout(false);
             this.headerCashRegisterContainer.ResumeLayout(false);
             this.headerCashRegisterContainer.PerformLayout();
+            this.MenuContainer.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -361,6 +450,13 @@ namespace CuCo_POS
         private System.Windows.Forms.Panel headerCashRegisterContainer;
         private System.Windows.Forms.Label CashRegisterLabel;
         private System.Windows.Forms.Label CashRegisterLabelDate;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel MenuContainer;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
