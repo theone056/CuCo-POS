@@ -51,11 +51,11 @@ namespace CuCo_POS
             this.CashRegisterLabel = new System.Windows.Forms.Label();
             this.MenuContainer = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.MenuflowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.MenuTypecomboBox = new System.Windows.Forms.ComboBox();
+            this.Searchlabel = new System.Windows.Forms.Label();
+            this.SearchtextBox = new System.Windows.Forms.TextBox();
             this.headerContainerMenu.SuspendLayout();
             this.parentContainer.SuspendLayout();
             this.BodyContainerMenu.SuspendLayout();
@@ -319,7 +319,7 @@ namespace CuCo_POS
             // MenuContainer
             // 
             this.MenuContainer.Controls.Add(this.panel2);
-            this.MenuContainer.Controls.Add(this.flowLayoutPanel1);
+            this.MenuContainer.Controls.Add(this.MenuflowLayoutPanel);
             this.MenuContainer.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuContainer.Location = new System.Drawing.Point(0, 0);
             this.MenuContainer.Name = "MenuContainer";
@@ -334,58 +334,60 @@ namespace CuCo_POS
             this.panel1.Size = new System.Drawing.Size(618, 537);
             this.panel1.TabIndex = 1;
             // 
-            // flowLayoutPanel1
+            // MenuflowLayoutPanel
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 66);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(620, 464);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.MenuflowLayoutPanel.AutoScroll = true;
+            this.MenuflowLayoutPanel.Location = new System.Drawing.Point(3, 66);
+            this.MenuflowLayoutPanel.Name = "MenuflowLayoutPanel";
+            this.MenuflowLayoutPanel.Size = new System.Drawing.Size(640, 464);
+            this.MenuflowLayoutPanel.TabIndex = 0;
+            this.MenuflowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuflowLayoutPanel_Paint);
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(76)))), ((int)(((byte)(112)))));
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.SearchtextBox);
+            this.panel2.Controls.Add(this.Searchlabel);
+            this.panel2.Controls.Add(this.MenuTypecomboBox);
             this.panel2.Location = new System.Drawing.Point(8, 6);
             this.panel2.Margin = new System.Windows.Forms.Padding(20);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(618, 47);
+            this.panel2.Size = new System.Drawing.Size(629, 47);
             this.panel2.TabIndex = 0;
             // 
-            // comboBox1
+            // MenuTypecomboBox
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(76)))), ((int)(((byte)(112)))));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(8, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(176, 28);
-            this.comboBox1.TabIndex = 0;
+            this.MenuTypecomboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(76)))), ((int)(((byte)(112)))));
+            this.MenuTypecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MenuTypecomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuTypecomboBox.FormattingEnabled = true;
+            this.MenuTypecomboBox.Location = new System.Drawing.Point(8, 10);
+            this.MenuTypecomboBox.Name = "MenuTypecomboBox";
+            this.MenuTypecomboBox.Size = new System.Drawing.Size(176, 28);
+            this.MenuTypecomboBox.TabIndex = 0;
             // 
-            // label3
+            // Searchlabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(260, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 25);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Search";
+            this.Searchlabel.AutoSize = true;
+            this.Searchlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Searchlabel.Location = new System.Drawing.Point(275, 11);
+            this.Searchlabel.Name = "Searchlabel";
+            this.Searchlabel.Size = new System.Drawing.Size(86, 25);
+            this.Searchlabel.TabIndex = 1;
+            this.Searchlabel.Text = "Search";
             // 
-            // textBox1
+            // SearchtextBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(113)))), ((int)(((byte)(141)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(352, 7);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 34);
-            this.textBox1.TabIndex = 2;
+            this.SearchtextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(113)))), ((int)(((byte)(141)))));
+            this.SearchtextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SearchtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchtextBox.Location = new System.Drawing.Point(365, 7);
+            this.SearchtextBox.Multiline = true;
+            this.SearchtextBox.Name = "SearchtextBox";
+            this.SearchtextBox.Size = new System.Drawing.Size(253, 34);
+            this.SearchtextBox.TabIndex = 2;
             // 
             // MainMenu
             // 
@@ -453,10 +455,10 @@ namespace CuCo_POS
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel MenuContainer;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.TextBox SearchtextBox;
+        private System.Windows.Forms.Label Searchlabel;
+        private System.Windows.Forms.ComboBox MenuTypecomboBox;
+        private System.Windows.Forms.FlowLayoutPanel MenuflowLayoutPanel;
     }
 }
 
