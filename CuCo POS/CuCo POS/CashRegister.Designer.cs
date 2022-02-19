@@ -42,11 +42,23 @@ namespace CuCo_POS
             this.headerCashRegisterContainer = new System.Windows.Forms.Panel();
             this.CashRegisterLabelDate = new System.Windows.Forms.Label();
             this.CashRegisterLabel = new System.Windows.Forms.Label();
+            this.CustomerNameContainer = new System.Windows.Forms.Panel();
+            this.tableDetailsContainer = new System.Windows.Forms.Panel();
+            this.backButtonContainer = new System.Windows.Forms.Panel();
+            this.totalDetailsContainer = new System.Windows.Forms.Panel();
+            this.dataGridContainer = new System.Windows.Forms.Panel();
+            this.dataGridViewOrderDetails = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.CashRegisterContainer.SuspendLayout();
             this.bodyCashRegisterContainer.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.MenuContainer.SuspendLayout();
             this.panel2.SuspendLayout();
             this.headerCashRegisterContainer.SuspendLayout();
+            this.CustomerNameContainer.SuspendLayout();
+            this.dataGridContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // CashRegisterContainer
@@ -62,10 +74,11 @@ namespace CuCo_POS
             this.CashRegisterContainer.Padding = new System.Windows.Forms.Padding(5);
             this.CashRegisterContainer.Size = new System.Drawing.Size(1288, 581);
             this.CashRegisterContainer.TabIndex = 6;
+            this.CashRegisterContainer.Paint += new System.Windows.Forms.PaintEventHandler(this.CashRegisterContainer_Paint);
             // 
             // bodyCashRegisterContainer
             // 
-            this.bodyCashRegisterContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(29)))), ((int)(((byte)(65)))));
+            this.bodyCashRegisterContainer.BackColor = System.Drawing.Color.White;
             this.bodyCashRegisterContainer.Controls.Add(this.panel1);
             this.bodyCashRegisterContainer.Controls.Add(this.MenuContainer);
             this.bodyCashRegisterContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -77,7 +90,13 @@ namespace CuCo_POS
             // 
             // panel1
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.dataGridContainer);
+            this.panel1.Controls.Add(this.totalDetailsContainer);
+            this.panel1.Controls.Add(this.backButtonContainer);
+            this.panel1.Controls.Add(this.tableDetailsContainer);
+            this.panel1.Controls.Add(this.CustomerNameContainer);
             this.panel1.Location = new System.Drawing.Point(660, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(618, 537);
@@ -85,9 +104,11 @@ namespace CuCo_POS
             // 
             // MenuContainer
             // 
+            this.MenuContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MenuContainer.Controls.Add(this.panel2);
             this.MenuContainer.Controls.Add(this.MenuflowLayoutPanel);
-            this.MenuContainer.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuContainer.Location = new System.Drawing.Point(0, 0);
             this.MenuContainer.Name = "MenuContainer";
             this.MenuContainer.Size = new System.Drawing.Size(646, 537);
@@ -109,20 +130,20 @@ namespace CuCo_POS
             // 
             // SearchtextBox
             // 
-            this.SearchtextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(113)))), ((int)(((byte)(141)))));
+            this.SearchtextBox.BackColor = System.Drawing.Color.White;
             this.SearchtextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchtextBox.Location = new System.Drawing.Point(365, 7);
+            this.SearchtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchtextBox.Location = new System.Drawing.Point(368, 9);
             this.SearchtextBox.Multiline = true;
             this.SearchtextBox.Name = "SearchtextBox";
-            this.SearchtextBox.Size = new System.Drawing.Size(253, 34);
+            this.SearchtextBox.Size = new System.Drawing.Size(253, 31);
             this.SearchtextBox.TabIndex = 2;
             // 
             // Searchlabel
             // 
             this.Searchlabel.AutoSize = true;
             this.Searchlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Searchlabel.Location = new System.Drawing.Point(275, 11);
+            this.Searchlabel.Location = new System.Drawing.Point(278, 11);
             this.Searchlabel.Name = "Searchlabel";
             this.Searchlabel.Size = new System.Drawing.Size(86, 25);
             this.Searchlabel.TabIndex = 1;
@@ -130,23 +151,34 @@ namespace CuCo_POS
             // 
             // MenuTypecomboBox
             // 
-            this.MenuTypecomboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(76)))), ((int)(((byte)(112)))));
-            this.MenuTypecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MenuTypecomboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "test1",
+            "test2",
+            "test3"});
+            this.MenuTypecomboBox.BackColor = System.Drawing.Color.White;
             this.MenuTypecomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuTypecomboBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MenuTypecomboBox.FormattingEnabled = true;
+            this.MenuTypecomboBox.Items.AddRange(new object[] {
+            "test1",
+            "test2",
+            "test3"});
             this.MenuTypecomboBox.Location = new System.Drawing.Point(8, 10);
             this.MenuTypecomboBox.Name = "MenuTypecomboBox";
-            this.MenuTypecomboBox.Size = new System.Drawing.Size(176, 28);
+            this.MenuTypecomboBox.Size = new System.Drawing.Size(162, 28);
             this.MenuTypecomboBox.TabIndex = 0;
+            this.MenuTypecomboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MenuTypecomboBox_KeyPress);
             // 
             // MenuflowLayoutPanel
             // 
+            this.MenuflowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.MenuflowLayoutPanel.AutoScroll = true;
-            this.MenuflowLayoutPanel.Location = new System.Drawing.Point(3, 66);
+            this.MenuflowLayoutPanel.Location = new System.Drawing.Point(3, 92);
             this.MenuflowLayoutPanel.Name = "MenuflowLayoutPanel";
-            this.MenuflowLayoutPanel.Size = new System.Drawing.Size(640, 464);
+            this.MenuflowLayoutPanel.Size = new System.Drawing.Size(640, 438);
             this.MenuflowLayoutPanel.TabIndex = 0;
-            this.MenuflowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuflowLayoutPanel_Paint);
+            this.MenuflowLayoutPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.q);
             // 
             // headerCashRegisterContainer
             // 
@@ -182,6 +214,88 @@ namespace CuCo_POS
             this.CashRegisterLabel.TabIndex = 1;
             this.CashRegisterLabel.Text = "Cashier: Derick";
             // 
+            // CustomerNameContainer
+            // 
+            this.CustomerNameContainer.Controls.Add(this.textBox1);
+            this.CustomerNameContainer.Controls.Add(this.label1);
+            this.CustomerNameContainer.Location = new System.Drawing.Point(3, 3);
+            this.CustomerNameContainer.Name = "CustomerNameContainer";
+            this.CustomerNameContainer.Size = new System.Drawing.Size(422, 38);
+            this.CustomerNameContainer.TabIndex = 0;
+            // 
+            // tableDetailsContainer
+            // 
+            this.tableDetailsContainer.Location = new System.Drawing.Point(3, 44);
+            this.tableDetailsContainer.Name = "tableDetailsContainer";
+            this.tableDetailsContainer.Size = new System.Drawing.Size(422, 38);
+            this.tableDetailsContainer.TabIndex = 1;
+            // 
+            // backButtonContainer
+            // 
+            this.backButtonContainer.Location = new System.Drawing.Point(431, 6);
+            this.backButtonContainer.Name = "backButtonContainer";
+            this.backButtonContainer.Size = new System.Drawing.Size(184, 76);
+            this.backButtonContainer.TabIndex = 2;
+            // 
+            // totalDetailsContainer
+            // 
+            this.totalDetailsContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.totalDetailsContainer.Location = new System.Drawing.Point(3, 367);
+            this.totalDetailsContainer.Name = "totalDetailsContainer";
+            this.totalDetailsContainer.Size = new System.Drawing.Size(612, 163);
+            this.totalDetailsContainer.TabIndex = 4;
+            // 
+            // dataGridContainer
+            // 
+            this.dataGridContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridContainer.Controls.Add(this.dataGridViewOrderDetails);
+            this.dataGridContainer.Location = new System.Drawing.Point(3, 88);
+            this.dataGridContainer.Name = "dataGridContainer";
+            this.dataGridContainer.Padding = new System.Windows.Forms.Padding(5);
+            this.dataGridContainer.Size = new System.Drawing.Size(612, 273);
+            this.dataGridContainer.TabIndex = 5;
+            // 
+            // dataGridViewOrderDetails
+            // 
+            this.dataGridViewOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOrderDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewOrderDetails.Location = new System.Drawing.Point(5, 5);
+            this.dataGridViewOrderDetails.Name = "dataGridViewOrderDetails";
+            this.dataGridViewOrderDetails.Size = new System.Drawing.Size(602, 263);
+            this.dataGridViewOrderDetails.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(5, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Customer";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(113)))), ((int)(((byte)(141)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(123, 4);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(296, 31);
+            this.textBox1.TabIndex = 3;
+            // 
             // CashRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,11 +317,16 @@ namespace CuCo_POS
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.CashRegisterContainer.ResumeLayout(false);
             this.bodyCashRegisterContainer.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.MenuContainer.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.headerCashRegisterContainer.ResumeLayout(false);
             this.headerCashRegisterContainer.PerformLayout();
+            this.CustomerNameContainer.ResumeLayout(false);
+            this.CustomerNameContainer.PerformLayout();
+            this.dataGridContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderDetails)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,6 +344,14 @@ namespace CuCo_POS
         private System.Windows.Forms.Label Searchlabel;
         private System.Windows.Forms.ComboBox MenuTypecomboBox;
         private System.Windows.Forms.FlowLayoutPanel MenuflowLayoutPanel;
+        private System.Windows.Forms.Panel totalDetailsContainer;
+        private System.Windows.Forms.Panel backButtonContainer;
+        private System.Windows.Forms.Panel tableDetailsContainer;
+        private System.Windows.Forms.Panel CustomerNameContainer;
+        private System.Windows.Forms.Panel dataGridContainer;
+        private System.Windows.Forms.DataGridView dataGridViewOrderDetails;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
