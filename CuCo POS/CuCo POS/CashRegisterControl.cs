@@ -10,27 +10,14 @@ using System.Windows.Forms;
 
 namespace CuCo_POS
 {
-    public partial class CashRegister : Form
+    public partial class CashRegisterControl : UserControl
     {
-        static CashRegister _obj;
-        public CashRegister()
+        public CashRegisterControl()
         {
             InitializeComponent();
-            CustomerTextBox.ReadOnly = true;
         }
 
-        public static CashRegister Instance
-        {
-            get
-            {
-                if(_obj == null)
-                {
-                    _obj = new CashRegister();
-                }
-                return _obj;
-            }
-        }
-        private void MainMenu_Load(object sender, EventArgs e)
+        private void CashRegisterControl_Load(object sender, EventArgs e)
         {
             for (int x = 0; x < 10; x++)
             {
@@ -67,9 +54,9 @@ namespace CuCo_POS
                 menuItem.Width = 200;
                 menuItem.Height = 160;
                 menuItem.Name = "name" + x;
-                menuItem.BackColor = Color.FromArgb(183,29,65);
+                menuItem.BackColor = Color.FromArgb(183, 29, 65);
                 menuItem.BorderStyle = BorderStyle.Fixed3D;
-               
+
                 menuItem.Controls.Add(menuPicture);
                 menuItem.Controls.Add(menuName);
                 menuItem.Controls.Add(menuPrice);
@@ -79,23 +66,8 @@ namespace CuCo_POS
                 menuName.Click += new EventHandler(MenuFlowLayoutItemClick);
                 menuPicture.Click += new EventHandler(MenuFlowLayoutItemClick);
                 MenuflowLayoutPanel.Controls.Add(menuItem);
-                
+
             }
-        }
-
-        private void MenuflowLayoutPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void CashRegisterContainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void MenuTypecomboBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
         }
 
         private void MenuFlowLayoutItemClick(object sender, EventArgs a)
@@ -104,37 +76,14 @@ namespace CuCo_POS
             MessageBox.Show(flowLayoutPanel.Name);
         }
 
-        private void CustomerTextBox_Leave(object sender, EventArgs e)
-        {
-            CustomerTextBox.Enabled = false;
-        }
-
-
-        private void CustomerTextBox_DoubleClick(object sender, EventArgs e)
-        {
-            CustomerTextBox.ReadOnly = false;
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             MainMenu mainMenu = new MainMenu();
-            mainMenu.parentContainer.Visible = true;
-            Close();
-        }
-
-        private void bodyCashRegisterContainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void MenuflowLayoutPanel_Paint_1(object sender, PaintEventArgs e)
-        {
-
+            mainMenu.TopLevel = false;
+            mainMenu.Dock = DockStyle.Fill;
+            ContainerPage.Instance.panelsContainer.Controls.Add(mainMenu);
+            mainMenu.Show();
+            this.Dispose();
         }
     }
 }

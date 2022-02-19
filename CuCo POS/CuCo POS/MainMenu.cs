@@ -101,11 +101,10 @@ namespace CuCo_POS
      
         private void salesRegister_Click(object sender, EventArgs e)
         {
-            CashRegister cashRegister = new CashRegister();
-            cashRegister.TopLevel = false;
-            parentContainer.Visible = false;
-            panelsContainer.Controls.Add(cashRegister);
-            cashRegister.Show();
+            CashRegisterControl cashRegisterControl = new CashRegisterControl();
+            cashRegisterControl.Dock = DockStyle.Fill;
+            ContainerPage.Instance.panelsContainer.Controls.Add(cashRegisterControl);
+            this.Dispose();
         }
     }
 }

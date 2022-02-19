@@ -30,11 +30,6 @@ namespace CuCo_POS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
-            this.headerContainerMenu = new System.Windows.Forms.Panel();
-            this.timeLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.titleLabel = new System.Windows.Forms.Label();
             this.parentContainer = new System.Windows.Forms.Panel();
             this.BodyContainerMenu = new System.Windows.Forms.Panel();
             this.reports = new System.Windows.Forms.PictureBox();
@@ -44,8 +39,11 @@ namespace CuCo_POS
             this.supplierList = new System.Windows.Forms.PictureBox();
             this.MenuList = new System.Windows.Forms.PictureBox();
             this.salesRegister = new System.Windows.Forms.PictureBox();
-            this.panelsContainer = new System.Windows.Forms.Panel();
-            this.headerContainerMenu.SuspendLayout();
+            this.headerContainerMenu = new System.Windows.Forms.Panel();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.parentContainer.SuspendLayout();
             this.BodyContainerMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reports)).BeginInit();
@@ -55,60 +53,8 @@ namespace CuCo_POS
             ((System.ComponentModel.ISupportInitialize)(this.supplierList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesRegister)).BeginInit();
-            this.panelsContainer.SuspendLayout();
+            this.headerContainerMenu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // headerContainerMenu
-            // 
-            this.headerContainerMenu.BackColor = System.Drawing.Color.Transparent;
-            this.headerContainerMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.headerContainerMenu.Controls.Add(this.timeLabel);
-            this.headerContainerMenu.Controls.Add(this.label1);
-            this.headerContainerMenu.Controls.Add(this.label2);
-            this.headerContainerMenu.Controls.Add(this.titleLabel);
-            this.headerContainerMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.headerContainerMenu.Location = new System.Drawing.Point(5, 5);
-            this.headerContainerMenu.Name = "headerContainerMenu";
-            this.headerContainerMenu.Size = new System.Drawing.Size(1278, 100);
-            this.headerContainerMenu.TabIndex = 0;
-            // 
-            // timeLabel
-            // 
-            this.timeLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.timeLabel.AutoSize = true;
-            this.timeLabel.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(799, 63);
-            this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(349, 23);
-            this.timeLabel.TabIndex = 3;
-            this.timeLabel.Text = "SATURDAY, FEBRUARY 12, 2022, 11:30 AM";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(30)))), ((int)(((byte)(66)))));
-            this.label1.Location = new System.Drawing.Point(551, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(597, 10);
-            this.label1.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(30)))), ((int)(((byte)(66)))));
-            this.label2.Location = new System.Drawing.Point(79, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(597, 10);
-            this.label2.TabIndex = 2;
-            // 
-            // titleLabel
-            // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Gill Sans MT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(73, 34);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(213, 52);
-            this.titleLabel.TabIndex = 1;
-            this.titleLabel.Text = "CuCo POS";
             // 
             // parentContainer
             // 
@@ -124,6 +70,8 @@ namespace CuCo_POS
             // 
             // BodyContainerMenu
             // 
+            this.BodyContainerMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BodyContainerMenu.Controls.Add(this.reports);
             this.BodyContainerMenu.Controls.Add(this.logout);
             this.BodyContainerMenu.Controls.Add(this.userList);
@@ -131,7 +79,6 @@ namespace CuCo_POS
             this.BodyContainerMenu.Controls.Add(this.supplierList);
             this.BodyContainerMenu.Controls.Add(this.MenuList);
             this.BodyContainerMenu.Controls.Add(this.salesRegister);
-            this.BodyContainerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BodyContainerMenu.Location = new System.Drawing.Point(5, 105);
             this.BodyContainerMenu.Name = "BodyContainerMenu";
             this.BodyContainerMenu.Size = new System.Drawing.Size(1278, 471);
@@ -236,15 +183,58 @@ namespace CuCo_POS
             this.salesRegister.MouseEnter += new System.EventHandler(this.salesRegister_MouseEnter);
             this.salesRegister.MouseLeave += new System.EventHandler(this.salesRegister_MouseLeave);
             // 
-            // panelsContainer
+            // headerContainerMenu
             // 
-            this.panelsContainer.BackColor = System.Drawing.Color.Transparent;
-            this.panelsContainer.Controls.Add(this.parentContainer);
-            this.panelsContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelsContainer.Location = new System.Drawing.Point(0, 0);
-            this.panelsContainer.Name = "panelsContainer";
-            this.panelsContainer.Size = new System.Drawing.Size(1288, 581);
-            this.panelsContainer.TabIndex = 6;
+            this.headerContainerMenu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.headerContainerMenu.BackColor = System.Drawing.Color.Transparent;
+            this.headerContainerMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.headerContainerMenu.Controls.Add(this.timeLabel);
+            this.headerContainerMenu.Controls.Add(this.label1);
+            this.headerContainerMenu.Controls.Add(this.label2);
+            this.headerContainerMenu.Controls.Add(this.titleLabel);
+            this.headerContainerMenu.Location = new System.Drawing.Point(5, 5);
+            this.headerContainerMenu.Name = "headerContainerMenu";
+            this.headerContainerMenu.Size = new System.Drawing.Size(1278, 100);
+            this.headerContainerMenu.TabIndex = 0;
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeLabel.Location = new System.Drawing.Point(799, 63);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(349, 23);
+            this.timeLabel.TabIndex = 3;
+            this.timeLabel.Text = "SATURDAY, FEBRUARY 12, 2022, 11:30 AM";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(30)))), ((int)(((byte)(66)))));
+            this.label1.Location = new System.Drawing.Point(551, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(597, 10);
+            this.label1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(30)))), ((int)(((byte)(66)))));
+            this.label2.Location = new System.Drawing.Point(79, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(597, 10);
+            this.label2.TabIndex = 2;
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Gill Sans MT", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Location = new System.Drawing.Point(73, 34);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(213, 52);
+            this.titleLabel.TabIndex = 1;
+            this.titleLabel.Text = "CuCo POS";
             // 
             // MainMenu
             // 
@@ -255,7 +245,7 @@ namespace CuCo_POS
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1288, 581);
             this.ControlBox = false;
-            this.Controls.Add(this.panelsContainer);
+            this.Controls.Add(this.parentContainer);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -265,8 +255,6 @@ namespace CuCo_POS
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainMenu_Load);
-            this.headerContainerMenu.ResumeLayout(false);
-            this.headerContainerMenu.PerformLayout();
             this.parentContainer.ResumeLayout(false);
             this.BodyContainerMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.reports)).EndInit();
@@ -276,28 +264,28 @@ namespace CuCo_POS
             ((System.ComponentModel.ISupportInitialize)(this.supplierList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salesRegister)).EndInit();
-            this.panelsContainer.ResumeLayout(false);
+            this.headerContainerMenu.ResumeLayout(false);
+            this.headerContainerMenu.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel headerContainerMenu;
-        private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label timeLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel parentContainer;
+        public System.Windows.Forms.Panel parentContainer;
         private System.Windows.Forms.Panel BodyContainerMenu;
-        private System.Windows.Forms.PictureBox supplierList;
-        private System.Windows.Forms.PictureBox MenuList;
-        private System.Windows.Forms.PictureBox salesRegister;
-        private System.Windows.Forms.PictureBox stockList;
         private System.Windows.Forms.PictureBox reports;
         private System.Windows.Forms.PictureBox logout;
         private System.Windows.Forms.PictureBox userList;
-        private System.Windows.Forms.Panel panelsContainer;
+        private System.Windows.Forms.PictureBox stockList;
+        private System.Windows.Forms.PictureBox supplierList;
+        private System.Windows.Forms.PictureBox MenuList;
+        private System.Windows.Forms.PictureBox salesRegister;
+        private System.Windows.Forms.Panel headerContainerMenu;
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label titleLabel;
     }
 }
 

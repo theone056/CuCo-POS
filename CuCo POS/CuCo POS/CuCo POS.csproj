@@ -102,6 +102,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CashRegisterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CashRegisterControl.Designer.cs">
+      <DependentUpon>CashRegisterControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CuCoDbContext.cs" />
     <Compile Include="Entities\Discount.cs" />
     <Compile Include="Entities\EmployeeList.cs" />
@@ -118,6 +124,12 @@
     <Compile Include="CashRegister.Designer.cs">
       <DependentUpon>CashRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="ContainerPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContainerPage.Designer.cs">
+      <DependentUpon>ContainerPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +141,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CashRegister.resx">
       <DependentUpon>CashRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashRegisterControl.resx">
+      <DependentUpon>CashRegisterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContainerPage.resx">
+      <DependentUpon>ContainerPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
