@@ -9,7 +9,6 @@ D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Deb
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\K4os.Compression.LZ4.Streams.dll
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\K4os.Hash.xxHash.dll
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\MySql.Data.dll
-D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\mysql.data.entity.EF6.dll
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\MySql.Data.EntityFramework.dll
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\System.Buffers.dll
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\System.Memory.dll
@@ -38,3 +37,4 @@ D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Deb
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.exe
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.pdb
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.csproj.AssemblyReference.cache
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo_POS.CashRegister.resources

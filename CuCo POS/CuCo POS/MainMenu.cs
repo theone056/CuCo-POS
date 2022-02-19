@@ -20,25 +20,8 @@ namespace CuCo_POS
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-            Button button = new Button();
-            button.Text = "Sample";
-            button.Name = "button1";
-            button.Height = 200;
-            button.BackColor = Color.Black;
-            button.Width = 250;
-            MenuflowLayoutPanel.Controls.Add(button);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-                
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
 
         }
-
 
         private void salesRegister_MouseEnter(object sender, EventArgs e)
         {
@@ -115,34 +98,11 @@ namespace CuCo_POS
             this.Close();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+     
+        private void salesRegister_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void menuListContainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void headerCashRegisterContainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void bodyCashRegisterContainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void MenuflowLayoutPanel_Paint(object sender, PaintEventArgs e)
-        {
-            
+            CashRegister cashRegister = new CashRegister();
+            panelsContainer.Controls.Clear();
         }
     }
 }
