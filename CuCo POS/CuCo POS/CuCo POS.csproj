@@ -118,12 +118,6 @@
     <Compile Include="Entities\PaymentType.cs" />
     <Compile Include="Entities\SupplierList.cs" />
     <Compile Include="Entities\UserList.cs" />
-    <Compile Include="CashRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CashRegister.Designer.cs">
-      <DependentUpon>CashRegister.cs</DependentUpon>
-    </Compile>
     <Compile Include="ContainerPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,9 +133,6 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CashRegister.resx">
-      <DependentUpon>CashRegister.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CashRegisterControl.resx">
       <DependentUpon>CashRegisterControl.cs</DependentUpon>
     </EmbeddedResource>
