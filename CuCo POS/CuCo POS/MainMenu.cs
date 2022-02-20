@@ -104,7 +104,7 @@ namespace CuCo_POS
             CashRegisterControl cashRegisterControl = new CashRegisterControl();
             cashRegisterControl.Dock = DockStyle.Fill;
             ContainerPage.Instance.panelsContainer.Controls.Add(cashRegisterControl);
-            this.Dispose();
+            cashRegisterControl.BringToFront();
         }
     }
 }

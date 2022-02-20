@@ -146,7 +146,7 @@ namespace CuCo_POS
             this.supplierList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.supplierList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("supplierList.BackgroundImage")));
             this.supplierList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.supplierList.Location = new System.Drawing.Point(889, 74);
+            this.supplierList.Location = new System.Drawing.Point(899, 74);
             this.supplierList.Name = "supplierList";
             this.supplierList.Size = new System.Drawing.Size(249, 161);
             this.supplierList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,7 +160,7 @@ namespace CuCo_POS
             this.MenuList.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MenuList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MenuList.BackgroundImage")));
             this.MenuList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MenuList.Location = new System.Drawing.Point(356, 74);
+            this.MenuList.Location = new System.Drawing.Point(355, 74);
             this.MenuList.Name = "MenuList";
             this.MenuList.Size = new System.Drawing.Size(249, 161);
             this.MenuList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -173,7 +173,7 @@ namespace CuCo_POS
             // 
             this.salesRegister.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("salesRegister.BackgroundImage")));
             this.salesRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.salesRegister.Location = new System.Drawing.Point(94, 74);
+            this.salesRegister.Location = new System.Drawing.Point(82, 74);
             this.salesRegister.Name = "salesRegister";
             this.salesRegister.Size = new System.Drawing.Size(249, 161);
             this.salesRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

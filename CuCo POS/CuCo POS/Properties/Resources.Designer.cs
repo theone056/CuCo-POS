@@ -133,6 +133,16 @@ namespace CuCo_POS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap return3 {
+            get {
+                object obj = ResourceManager.GetObject("return3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap salesregister {
             get {
                 object obj = ResourceManager.GetObject("salesregister", resourceCulture);
@@ -186,6 +196,16 @@ namespace CuCo_POS.Properties {
         internal static System.Drawing.Bitmap supplierlist2 {
             get {
                 object obj = ResourceManager.GetObject("supplierlist2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trash {
+            get {
+                object obj = ResourceManager.GetObject("trash", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -29,23 +29,37 @@ namespace CuCo_POS
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.CashRegisterContainer = new System.Windows.Forms.Panel();
             this.bodyCashRegisterContainer = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.invoiceContainer = new System.Windows.Forms.Panel();
             this.dataGridContainer = new System.Windows.Forms.Panel();
             this.dataGridViewOrderDetails = new System.Windows.Forms.DataGridView();
             this.totalDetailsContainer = new System.Windows.Forms.Panel();
+            this.buttonsContainer = new System.Windows.Forms.Panel();
+            this.buttonCancelOrder = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonNewOrder = new System.Windows.Forms.Button();
+            this.buttonPrintSlip = new System.Windows.Forms.Button();
+            this.buttonCheckOut = new System.Windows.Forms.Button();
+            this.totalContainer = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.backButtonContainer = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxServiceMode = new System.Windows.Forms.ComboBox();
             this.tableDetailsContainer = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxOrderNumber = new System.Windows.Forms.ComboBox();
+            this.comboBoxTableNumber = new System.Windows.Forms.ComboBox();
+            this.labelOrderNum = new System.Windows.Forms.Label();
+            this.labelTablenum = new System.Windows.Forms.Label();
             this.CustomerNameContainer = new System.Windows.Forms.Panel();
             this.CustomerTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LabelCustomer = new System.Windows.Forms.Label();
             this.MenuContainer = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.SearchtextBox = new System.Windows.Forms.TextBox();
@@ -57,9 +71,12 @@ namespace CuCo_POS
             this.CashRegisterLabel = new System.Windows.Forms.Label();
             this.CashRegisterContainer.SuspendLayout();
             this.bodyCashRegisterContainer.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.invoiceContainer.SuspendLayout();
             this.dataGridContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderDetails)).BeginInit();
+            this.totalDetailsContainer.SuspendLayout();
+            this.buttonsContainer.SuspendLayout();
+            this.totalContainer.SuspendLayout();
             this.backButtonContainer.SuspendLayout();
             this.tableDetailsContainer.SuspendLayout();
             this.CustomerNameContainer.SuspendLayout();
@@ -85,7 +102,7 @@ namespace CuCo_POS
             // bodyCashRegisterContainer
             // 
             this.bodyCashRegisterContainer.BackColor = System.Drawing.Color.White;
-            this.bodyCashRegisterContainer.Controls.Add(this.panel1);
+            this.bodyCashRegisterContainer.Controls.Add(this.invoiceContainer);
             this.bodyCashRegisterContainer.Controls.Add(this.MenuContainer);
             this.bodyCashRegisterContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bodyCashRegisterContainer.ForeColor = System.Drawing.Color.White;
@@ -94,19 +111,20 @@ namespace CuCo_POS
             this.bodyCashRegisterContainer.Size = new System.Drawing.Size(1290, 545);
             this.bodyCashRegisterContainer.TabIndex = 1;
             // 
-            // panel1
+            // invoiceContainer
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.invoiceContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dataGridContainer);
-            this.panel1.Controls.Add(this.totalDetailsContainer);
-            this.panel1.Controls.Add(this.backButtonContainer);
-            this.panel1.Controls.Add(this.tableDetailsContainer);
-            this.panel1.Controls.Add(this.CustomerNameContainer);
-            this.panel1.Location = new System.Drawing.Point(660, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(630, 537);
-            this.panel1.TabIndex = 1;
+            this.invoiceContainer.Controls.Add(this.dataGridContainer);
+            this.invoiceContainer.Controls.Add(this.totalDetailsContainer);
+            this.invoiceContainer.Controls.Add(this.backButtonContainer);
+            this.invoiceContainer.Controls.Add(this.tableDetailsContainer);
+            this.invoiceContainer.Controls.Add(this.CustomerNameContainer);
+            this.invoiceContainer.Location = new System.Drawing.Point(660, 0);
+            this.invoiceContainer.Name = "invoiceContainer";
+            this.invoiceContainer.Size = new System.Drawing.Size(630, 537);
+            this.invoiceContainer.TabIndex = 1;
             // 
             // dataGridContainer
             // 
@@ -117,149 +135,324 @@ namespace CuCo_POS
             this.dataGridContainer.Location = new System.Drawing.Point(3, 88);
             this.dataGridContainer.Name = "dataGridContainer";
             this.dataGridContainer.Padding = new System.Windows.Forms.Padding(5);
-            this.dataGridContainer.Size = new System.Drawing.Size(624, 273);
+            this.dataGridContainer.Size = new System.Drawing.Size(624, 232);
             this.dataGridContainer.TabIndex = 5;
             // 
             // dataGridViewOrderDetails
             // 
+            this.dataGridViewOrderDetails.AllowUserToAddRows = false;
+            this.dataGridViewOrderDetails.AllowUserToDeleteRows = false;
+            this.dataGridViewOrderDetails.AllowUserToResizeColumns = false;
+            this.dataGridViewOrderDetails.AllowUserToResizeRows = false;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.dataGridViewOrderDetails.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridViewOrderDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewOrderDetails.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewOrderDetails.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewOrderDetails.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewOrderDetails.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewOrderDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridViewOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewOrderDetails.DefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridViewOrderDetails.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewOrderDetails.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridViewOrderDetails.EnableHeadersVisualStyles = false;
+            this.dataGridViewOrderDetails.GridColor = System.Drawing.Color.White;
             this.dataGridViewOrderDetails.Location = new System.Drawing.Point(5, 5);
+            this.dataGridViewOrderDetails.MultiSelect = false;
             this.dataGridViewOrderDetails.Name = "dataGridViewOrderDetails";
-            this.dataGridViewOrderDetails.Size = new System.Drawing.Size(614, 263);
+            this.dataGridViewOrderDetails.ReadOnly = true;
+            this.dataGridViewOrderDetails.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewOrderDetails.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridViewOrderDetails.RowHeadersVisible = false;
+            this.dataGridViewOrderDetails.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewOrderDetails.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridViewOrderDetails.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(204)))), ((int)(((byte)(214)))));
+            this.dataGridViewOrderDetails.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewOrderDetails.RowTemplate.DividerHeight = 5;
+            this.dataGridViewOrderDetails.RowTemplate.Height = 50;
+            this.dataGridViewOrderDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewOrderDetails.Size = new System.Drawing.Size(614, 222);
             this.dataGridViewOrderDetails.TabIndex = 0;
             // 
             // totalDetailsContainer
             // 
-            this.totalDetailsContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.totalDetailsContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.totalDetailsContainer.Location = new System.Drawing.Point(3, 367);
+            this.totalDetailsContainer.Controls.Add(this.buttonsContainer);
+            this.totalDetailsContainer.Controls.Add(this.totalContainer);
+            this.totalDetailsContainer.Location = new System.Drawing.Point(3, 326);
             this.totalDetailsContainer.Name = "totalDetailsContainer";
-            this.totalDetailsContainer.Size = new System.Drawing.Size(624, 163);
+            this.totalDetailsContainer.Size = new System.Drawing.Size(624, 204);
             this.totalDetailsContainer.TabIndex = 4;
+            // 
+            // buttonsContainer
+            // 
+            this.buttonsContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonsContainer.Controls.Add(this.buttonCancelOrder);
+            this.buttonsContainer.Controls.Add(this.buttonSave);
+            this.buttonsContainer.Controls.Add(this.buttonNewOrder);
+            this.buttonsContainer.Controls.Add(this.buttonPrintSlip);
+            this.buttonsContainer.Controls.Add(this.buttonCheckOut);
+            this.buttonsContainer.Location = new System.Drawing.Point(355, 3);
+            this.buttonsContainer.Name = "buttonsContainer";
+            this.buttonsContainer.Size = new System.Drawing.Size(269, 198);
+            this.buttonsContainer.TabIndex = 1;
+            // 
+            // buttonCancelOrder
+            // 
+            this.buttonCancelOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCancelOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(21)))), ((int)(((byte)(48)))));
+            this.buttonCancelOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelOrder.Location = new System.Drawing.Point(137, 135);
+            this.buttonCancelOrder.Name = "buttonCancelOrder";
+            this.buttonCancelOrder.Size = new System.Drawing.Size(127, 60);
+            this.buttonCancelOrder.TabIndex = 7;
+            this.buttonCancelOrder.Text = "CANCEL ORDER";
+            this.buttonCancelOrder.UseVisualStyleBackColor = false;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(21)))), ((int)(((byte)(48)))));
+            this.buttonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.Location = new System.Drawing.Point(137, 69);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(127, 60);
+            this.buttonSave.TabIndex = 6;
+            this.buttonSave.Text = "SAVE";
+            this.buttonSave.UseVisualStyleBackColor = false;
+            // 
+            // buttonNewOrder
+            // 
+            this.buttonNewOrder.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonNewOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(21)))), ((int)(((byte)(48)))));
+            this.buttonNewOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNewOrder.Location = new System.Drawing.Point(4, 69);
+            this.buttonNewOrder.Name = "buttonNewOrder";
+            this.buttonNewOrder.Size = new System.Drawing.Size(127, 60);
+            this.buttonNewOrder.TabIndex = 5;
+            this.buttonNewOrder.Text = "NEW ORDER";
+            this.buttonNewOrder.UseVisualStyleBackColor = false;
+            // 
+            // buttonPrintSlip
+            // 
+            this.buttonPrintSlip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonPrintSlip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(21)))), ((int)(((byte)(48)))));
+            this.buttonPrintSlip.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrintSlip.Location = new System.Drawing.Point(4, 135);
+            this.buttonPrintSlip.Name = "buttonPrintSlip";
+            this.buttonPrintSlip.Size = new System.Drawing.Size(127, 60);
+            this.buttonPrintSlip.TabIndex = 4;
+            this.buttonPrintSlip.Text = "PRINT ORDER SLIP";
+            this.buttonPrintSlip.UseVisualStyleBackColor = false;
+            // 
+            // buttonCheckOut
+            // 
+            this.buttonCheckOut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCheckOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(21)))), ((int)(((byte)(48)))));
+            this.buttonCheckOut.Location = new System.Drawing.Point(4, 3);
+            this.buttonCheckOut.Name = "buttonCheckOut";
+            this.buttonCheckOut.Size = new System.Drawing.Size(260, 60);
+            this.buttonCheckOut.TabIndex = 0;
+            this.buttonCheckOut.Text = "CHECK OUT";
+            this.buttonCheckOut.UseVisualStyleBackColor = true;
+            // 
+            // totalContainer
+            // 
+            this.totalContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.totalContainer.Controls.Add(this.label1);
+            this.totalContainer.Controls.Add(this.label6);
+            this.totalContainer.Location = new System.Drawing.Point(0, 0);
+            this.totalContainer.Name = "totalContainer";
+            this.totalContainer.Size = new System.Drawing.Size(349, 204);
+            this.totalContainer.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(46)))), ((int)(((byte)(79)))));
+            this.label1.Location = new System.Drawing.Point(0, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(349, 138);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "100,000.00";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(349, 66);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "TOTAL AMOUNT";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // backButtonContainer
             // 
+            this.backButtonContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.backButtonContainer.Controls.Add(this.button1);
-            this.backButtonContainer.Controls.Add(this.comboBox3);
+            this.backButtonContainer.Controls.Add(this.comboBoxServiceMode);
             this.backButtonContainer.Location = new System.Drawing.Point(429, 6);
             this.backButtonContainer.Name = "backButtonContainer";
-            this.backButtonContainer.Size = new System.Drawing.Size(186, 76);
+            this.backButtonContainer.Size = new System.Drawing.Size(193, 76);
             this.backButtonContainer.TabIndex = 2;
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(119, 5);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::CuCo_POS.Properties.Resources.return3;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(125, 9);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 62);
+            this.button1.Size = new System.Drawing.Size(62, 55);
             this.button1.TabIndex = 8;
-            this.button1.Text = "BACK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox3
+            // comboBoxServiceMode
             // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboBoxServiceMode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.AutoCompleteCustomSource.AddRange(new string[] {
+            this.comboBoxServiceMode.AutoCompleteCustomSource.AddRange(new string[] {
             "test1",
             "test2",
             "test3"});
-            this.comboBox3.BackColor = System.Drawing.Color.White;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.comboBoxServiceMode.BackColor = System.Drawing.Color.White;
+            this.comboBoxServiceMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxServiceMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxServiceMode.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.comboBoxServiceMode.FormattingEnabled = true;
+            this.comboBoxServiceMode.Items.AddRange(new object[] {
             "DINE IN",
             "TAKE OUT"});
-            this.comboBox3.Location = new System.Drawing.Point(3, 10);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(109, 50);
-            this.comboBox3.TabIndex = 7;
+            this.comboBoxServiceMode.Location = new System.Drawing.Point(3, 14);
+            this.comboBoxServiceMode.Name = "comboBoxServiceMode";
+            this.comboBoxServiceMode.Size = new System.Drawing.Size(116, 45);
+            this.comboBoxServiceMode.TabIndex = 7;
             // 
             // tableDetailsContainer
             // 
-            this.tableDetailsContainer.Controls.Add(this.comboBox2);
-            this.tableDetailsContainer.Controls.Add(this.comboBox1);
-            this.tableDetailsContainer.Controls.Add(this.label3);
-            this.tableDetailsContainer.Controls.Add(this.label2);
+            this.tableDetailsContainer.Controls.Add(this.comboBoxOrderNumber);
+            this.tableDetailsContainer.Controls.Add(this.comboBoxTableNumber);
+            this.tableDetailsContainer.Controls.Add(this.labelOrderNum);
+            this.tableDetailsContainer.Controls.Add(this.labelTablenum);
             this.tableDetailsContainer.Location = new System.Drawing.Point(3, 44);
             this.tableDetailsContainer.Name = "tableDetailsContainer";
             this.tableDetailsContainer.Size = new System.Drawing.Size(423, 38);
             this.tableDetailsContainer.TabIndex = 1;
             // 
-            // comboBox2
+            // comboBoxOrderNumber
             // 
-            this.comboBox2.AutoCompleteCustomSource.AddRange(new string[] {
+            this.comboBoxOrderNumber.AutoCompleteCustomSource.AddRange(new string[] {
             "test1",
             "test2",
             "test3"});
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxOrderNumber.BackColor = System.Drawing.Color.White;
+            this.comboBoxOrderNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxOrderNumber.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.comboBoxOrderNumber.FormattingEnabled = true;
+            this.comboBoxOrderNumber.Items.AddRange(new object[] {
             "test1",
             "test2",
             "test3"});
-            this.comboBox2.Location = new System.Drawing.Point(262, 5);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(158, 28);
-            this.comboBox2.TabIndex = 7;
+            this.comboBoxOrderNumber.Location = new System.Drawing.Point(262, 5);
+            this.comboBoxOrderNumber.Name = "comboBoxOrderNumber";
+            this.comboBoxOrderNumber.Size = new System.Drawing.Size(158, 28);
+            this.comboBoxOrderNumber.TabIndex = 7;
             // 
-            // comboBox1
+            // comboBoxTableNumber
             // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            this.comboBoxTableNumber.AutoCompleteCustomSource.AddRange(new string[] {
             "test1",
             "test2",
             "test3"});
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxTableNumber.BackColor = System.Drawing.Color.White;
+            this.comboBoxTableNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTableNumber.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.comboBoxTableNumber.FormattingEnabled = true;
+            this.comboBoxTableNumber.Items.AddRange(new object[] {
             "test1",
             "test2",
             "test3"});
-            this.comboBox1.Location = new System.Drawing.Point(89, 5);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(75, 28);
-            this.comboBox1.TabIndex = 6;
+            this.comboBoxTableNumber.Location = new System.Drawing.Point(89, 5);
+            this.comboBoxTableNumber.Name = "comboBoxTableNumber";
+            this.comboBoxTableNumber.Size = new System.Drawing.Size(75, 28);
+            this.comboBoxTableNumber.TabIndex = 6;
             // 
-            // label3
+            // labelOrderNum
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelOrderNum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(170, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "ORDER #";
+            this.labelOrderNum.AutoSize = true;
+            this.labelOrderNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOrderNum.ForeColor = System.Drawing.Color.Black;
+            this.labelOrderNum.Location = new System.Drawing.Point(170, 9);
+            this.labelOrderNum.Name = "labelOrderNum";
+            this.labelOrderNum.Size = new System.Drawing.Size(88, 20);
+            this.labelOrderNum.TabIndex = 5;
+            this.labelOrderNum.Text = "ORDER #";
             // 
-            // label2
+            // labelTablenum
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelTablenum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(3, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "TABLE #";
+            this.labelTablenum.AutoSize = true;
+            this.labelTablenum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTablenum.ForeColor = System.Drawing.Color.Black;
+            this.labelTablenum.Location = new System.Drawing.Point(3, 9);
+            this.labelTablenum.Name = "labelTablenum";
+            this.labelTablenum.Size = new System.Drawing.Size(80, 20);
+            this.labelTablenum.TabIndex = 4;
+            this.labelTablenum.Text = "TABLE #";
             // 
             // CustomerNameContainer
             // 
             this.CustomerNameContainer.Controls.Add(this.CustomerTextBox);
-            this.CustomerNameContainer.Controls.Add(this.label1);
+            this.CustomerNameContainer.Controls.Add(this.LabelCustomer);
             this.CustomerNameContainer.Location = new System.Drawing.Point(3, 3);
             this.CustomerNameContainer.Name = "CustomerNameContainer";
             this.CustomerNameContainer.Size = new System.Drawing.Size(423, 38);
@@ -278,26 +471,27 @@ namespace CuCo_POS
             this.CustomerTextBox.Name = "CustomerTextBox";
             this.CustomerTextBox.Size = new System.Drawing.Size(297, 31);
             this.CustomerTextBox.TabIndex = 3;
+            this.CustomerTextBox.Text = "Guest";
             // 
-            // label1
+            // LabelCustomer
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.LabelCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(5, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Customer";
+            this.LabelCustomer.AutoSize = true;
+            this.LabelCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCustomer.ForeColor = System.Drawing.Color.Black;
+            this.LabelCustomer.Location = new System.Drawing.Point(5, 7);
+            this.LabelCustomer.Name = "LabelCustomer";
+            this.LabelCustomer.Size = new System.Drawing.Size(112, 25);
+            this.LabelCustomer.TabIndex = 2;
+            this.LabelCustomer.Text = "Customer";
             // 
             // MenuContainer
             // 
-            this.MenuContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MenuContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.MenuContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(29)))), ((int)(((byte)(65)))));
             this.MenuContainer.Controls.Add(this.panel2);
             this.MenuContainer.Controls.Add(this.MenuflowLayoutPanel);
             this.MenuContainer.Location = new System.Drawing.Point(0, 0);
@@ -321,7 +515,7 @@ namespace CuCo_POS
             // 
             // SearchtextBox
             // 
-            this.SearchtextBox.BackColor = System.Drawing.Color.White;
+            this.SearchtextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(113)))), ((int)(((byte)(141)))));
             this.SearchtextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchtextBox.Location = new System.Drawing.Point(368, 9);
@@ -361,8 +555,9 @@ namespace CuCo_POS
             // 
             // MenuflowLayoutPanel
             // 
-            this.MenuflowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.MenuflowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MenuflowLayoutPanel.AutoScroll = true;
             this.MenuflowLayoutPanel.Location = new System.Drawing.Point(3, 92);
             this.MenuflowLayoutPanel.Name = "MenuflowLayoutPanel";
@@ -413,9 +608,12 @@ namespace CuCo_POS
             this.Load += new System.EventHandler(this.CashRegisterControl_Load);
             this.CashRegisterContainer.ResumeLayout(false);
             this.bodyCashRegisterContainer.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.invoiceContainer.ResumeLayout(false);
             this.dataGridContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderDetails)).EndInit();
+            this.totalDetailsContainer.ResumeLayout(false);
+            this.buttonsContainer.ResumeLayout(false);
+            this.totalContainer.ResumeLayout(false);
             this.backButtonContainer.ResumeLayout(false);
             this.tableDetailsContainer.ResumeLayout(false);
             this.tableDetailsContainer.PerformLayout();
@@ -434,21 +632,6 @@ namespace CuCo_POS
 
         private System.Windows.Forms.Panel CashRegisterContainer;
         private System.Windows.Forms.Panel bodyCashRegisterContainer;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel dataGridContainer;
-        private System.Windows.Forms.DataGridView dataGridViewOrderDetails;
-        private System.Windows.Forms.Panel totalDetailsContainer;
-        private System.Windows.Forms.Panel backButtonContainer;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Panel tableDetailsContainer;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel CustomerNameContainer;
-        private System.Windows.Forms.TextBox CustomerTextBox;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel MenuContainer;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox SearchtextBox;
@@ -458,5 +641,29 @@ namespace CuCo_POS
         private System.Windows.Forms.Panel headerCashRegisterContainer;
         private System.Windows.Forms.Label CashRegisterLabelDate;
         private System.Windows.Forms.Label CashRegisterLabel;
+        private System.Windows.Forms.Panel invoiceContainer;
+        private System.Windows.Forms.Panel dataGridContainer;
+        private System.Windows.Forms.DataGridView dataGridViewOrderDetails;
+        private System.Windows.Forms.Panel totalDetailsContainer;
+        private System.Windows.Forms.Panel backButtonContainer;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBoxServiceMode;
+        private System.Windows.Forms.Panel tableDetailsContainer;
+        private System.Windows.Forms.ComboBox comboBoxOrderNumber;
+        private System.Windows.Forms.ComboBox comboBoxTableNumber;
+        private System.Windows.Forms.Label labelOrderNum;
+        private System.Windows.Forms.Label labelTablenum;
+        private System.Windows.Forms.Panel CustomerNameContainer;
+        private System.Windows.Forms.TextBox CustomerTextBox;
+        private System.Windows.Forms.Label LabelCustomer;
+        private System.Windows.Forms.Panel buttonsContainer;
+        private System.Windows.Forms.Button buttonPrintSlip;
+        private System.Windows.Forms.Button buttonCheckOut;
+        private System.Windows.Forms.Panel totalContainer;
+        private System.Windows.Forms.Button buttonCancelOrder;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonNewOrder;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
     }
 }
