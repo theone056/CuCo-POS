@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuCo POS", "CuCo POS\CuCo POS.csproj", "{1DFD6E20-496D-499F-B97A-B0321E15408E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuCoPOSLib", "CuCoPOSLib\CuCoPOSLib.csproj", "{D997232D-7D20-478F-A3F1-1C302799EBD2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuCoPOSLib", "CuCoPOSLib\CuCoPOSLib.csproj", "{CCCEF8F9-B3CF-4076-8978-2EC195F5054A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{1DFD6E20-496D-499F-B97A-B0321E15408E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DFD6E20-496D-499F-B97A-B0321E15408E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DFD6E20-496D-499F-B97A-B0321E15408E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D997232D-7D20-478F-A3F1-1C302799EBD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D997232D-7D20-478F-A3F1-1C302799EBD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D997232D-7D20-478F-A3F1-1C302799EBD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D997232D-7D20-478F-A3F1-1C302799EBD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCCEF8F9-B3CF-4076-8978-2EC195F5054A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCCEF8F9-B3CF-4076-8978-2EC195F5054A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCCEF8F9-B3CF-4076-8978-2EC195F5054A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCCEF8F9-B3CF-4076-8978-2EC195F5054A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

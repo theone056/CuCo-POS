@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.EntityFramework;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +18,7 @@ namespace CuCo_POS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            DbConfiguration.SetConfiguration(new MySqlEFConfiguration());
             Application.Run(new ContainerPage());
         }
     }
