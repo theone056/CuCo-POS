@@ -81,15 +81,16 @@ namespace CuCo_POS
             this.BodyContainerMenu.Controls.Add(this.salesRegister);
             this.BodyContainerMenu.Location = new System.Drawing.Point(5, 105);
             this.BodyContainerMenu.Name = "BodyContainerMenu";
-            this.BodyContainerMenu.Size = new System.Drawing.Size(1278, 471);
+            this.BodyContainerMenu.Size = new System.Drawing.Size(1275, 471);
             this.BodyContainerMenu.TabIndex = 1;
+            this.BodyContainerMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.BodyContainerMenu_Paint);
             // 
             // reports
             // 
             this.reports.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.reports.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reports.BackgroundImage")));
             this.reports.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.reports.Location = new System.Drawing.Point(495, 298);
+            this.reports.Location = new System.Drawing.Point(514, 298);
             this.reports.Name = "reports";
             this.reports.Size = new System.Drawing.Size(249, 161);
             this.reports.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,7 +104,7 @@ namespace CuCo_POS
             this.logout.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.logout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout.BackgroundImage")));
             this.logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.logout.Location = new System.Drawing.Point(808, 298);
+            this.logout.Location = new System.Drawing.Point(815, 298);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(249, 161);
             this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,7 +119,7 @@ namespace CuCo_POS
             this.userList.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.userList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userList.BackgroundImage")));
             this.userList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userList.Location = new System.Drawing.Point(175, 298);
+            this.userList.Location = new System.Drawing.Point(214, 298);
             this.userList.Name = "userList";
             this.userList.Size = new System.Drawing.Size(249, 161);
             this.userList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,7 +133,7 @@ namespace CuCo_POS
             this.stockList.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.stockList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stockList.BackgroundImage")));
             this.stockList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.stockList.Location = new System.Drawing.Point(629, 74);
+            this.stockList.Location = new System.Drawing.Point(674, 74);
             this.stockList.Name = "stockList";
             this.stockList.Size = new System.Drawing.Size(249, 161);
             this.stockList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -146,7 +147,7 @@ namespace CuCo_POS
             this.supplierList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.supplierList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("supplierList.BackgroundImage")));
             this.supplierList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.supplierList.Location = new System.Drawing.Point(899, 74);
+            this.supplierList.Location = new System.Drawing.Point(960, 74);
             this.supplierList.Name = "supplierList";
             this.supplierList.Size = new System.Drawing.Size(249, 161);
             this.supplierList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,7 +161,7 @@ namespace CuCo_POS
             this.MenuList.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MenuList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MenuList.BackgroundImage")));
             this.MenuList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MenuList.Location = new System.Drawing.Point(355, 74);
+            this.MenuList.Location = new System.Drawing.Point(367, 74);
             this.MenuList.Name = "MenuList";
             this.MenuList.Size = new System.Drawing.Size(249, 161);
             this.MenuList.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -195,7 +196,7 @@ namespace CuCo_POS
             this.headerContainerMenu.Controls.Add(this.titleLabel);
             this.headerContainerMenu.Location = new System.Drawing.Point(5, 5);
             this.headerContainerMenu.Name = "headerContainerMenu";
-            this.headerContainerMenu.Size = new System.Drawing.Size(1278, 100);
+            this.headerContainerMenu.Size = new System.Drawing.Size(1275, 100);
             this.headerContainerMenu.TabIndex = 0;
             // 
             // timeLabel
@@ -203,7 +204,7 @@ namespace CuCo_POS
             this.timeLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(799, 63);
+            this.timeLabel.Location = new System.Drawing.Point(862, 63);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(349, 23);
             this.timeLabel.TabIndex = 3;
@@ -211,15 +212,18 @@ namespace CuCo_POS
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(30)))), ((int)(((byte)(66)))));
-            this.label1.Location = new System.Drawing.Point(551, 90);
+            this.label1.Location = new System.Drawing.Point(612, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(597, 10);
             this.label1.TabIndex = 4;
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(30)))), ((int)(((byte)(66)))));
             this.label2.Location = new System.Drawing.Point(79, 90);
             this.label2.Name = "label2";

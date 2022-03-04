@@ -1,4 +1,8 @@
-﻿using System;
+﻿using CuCo_POS.Entities;
+using CuCoPOSLib.FACADE;
+using CuCoPOSLib.FACADE.Interface;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +41,9 @@ namespace CuCo_POS
 
         private void CashRegisterControl_Load(object sender, EventArgs e)
         {
-            for (int x = 0; x < 10; x++)
+            ICuCoPOSFacade GetItem = new CuCoPOSFacade();
+            var allItem = JsonConvert.DeserializeObject<List<MenuList>>(JsonConvert.SerializeObject(GetItem.GetAllMenuItem().Result));
+            for (int x = 0; x < allItem.Count; x++)
             {
                 Panel menuItem = new Panel();
                 Label menuName = new Label();
@@ -48,20 +54,20 @@ namespace CuCo_POS
                 menuPicture.BackgroundImage = Properties.Resources.salesregister;
                 menuPicture.Width = 200;
                 menuPicture.Height = 120;
-                menuPicture.Name = "name" + x;
+                menuPicture.Name = allItem[x].MenuName;
                 menuPicture.BackgroundImageLayout = ImageLayout.Stretch;
                 menuPicture.Anchor = (AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right);
 
-                menuName.Text = "name" + x;
-                menuName.Name = "name" + x;
+                menuName.Text = allItem[x].MenuName;
+                menuName.Name = allItem[x].MenuName;
                 menuName.ForeColor = Color.Black;
                 menuName.Width = 200;
                 menuName.Height = 15;
                 menuName.TextAlign = ContentAlignment.TopCenter;
                 menuName.Location = new Point(0, 120);
 
-                menuPrice.Text = "name" + x;
-                menuPrice.Name = "name" + x;
+                menuPrice.Text = allItem[x].MenuPrice.ToString();
+                menuPrice.Name = allItem[x].MenuName ;
                 menuPrice.ForeColor = Color.Black;
                 menuPrice.Width = 200;
                 menuPrice.Height = 15;
@@ -71,14 +77,14 @@ namespace CuCo_POS
 
                 menuItem.Width = 200;
                 menuItem.Height = 160;
-                menuItem.Name = "name" + x;
+                menuItem.Name = allItem[x].MenuName;
                 menuItem.BackColor = Color.White;
                 menuItem.BorderStyle = BorderStyle.Fixed3D;
 
                 menuItem.Controls.Add(menuPicture);
                 menuItem.Controls.Add(menuName);
                 menuItem.Controls.Add(menuPrice);
-                MenuflowLayoutPanel.Name = "name" + x;
+                MenuflowLayoutPanel.Name = allItem[x].MenuName;
                 menuItem.Click += new EventHandler(MenuFlowLayoutItemClick);
                 menuPrice.Click += new EventHandler(MenuFlowLayoutItemClick);
                 menuName.Click += new EventHandler(MenuFlowLayoutItemClick);
@@ -97,7 +103,7 @@ namespace CuCo_POS
             int qty = 1;
             if (row.Count() == 0)
             {
-                dataGridViewOrderDetails.Rows.Add(flowLayoutPanel.Name,qty, "100");
+                dataGridViewOrderDetails.Rows.Add(flowLayoutPanel.Name,qty,"100");
             }
             else
             {

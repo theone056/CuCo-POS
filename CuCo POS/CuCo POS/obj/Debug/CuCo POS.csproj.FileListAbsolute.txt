@@ -39,4 +39,7 @@ D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Deb
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo_POS.ContainerPage.resources
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo_POS.CashRegisterControl.resources
 D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo POS.csproj.AssemblyReference.cache
-D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\obj\Debug\CuCo_POS.Migrations.InitialDb.resources
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\CuCoPOSLibrary.dll
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\CuCoPOSLibrary.pdb
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\Newtonsoft.Json.dll
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCo POS\bin\Debug\Newtonsoft.Json.xml

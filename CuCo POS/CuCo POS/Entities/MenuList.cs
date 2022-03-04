@@ -9,16 +9,17 @@ namespace CuCo_POS.Entities
 {
     public class MenuList
     {
-        [Key]
         public int MenuID { get; set; }
 
         public string MenuName { get; set; }
 
-        public int MenuPrice { get; set; }
+        public double MenuPrice { get; set; }
 
-        public string MenuType { get; set; }
+        public string Menu_Type { get; set; }
 
         public bool isAvail { get; set; }
+
+        public string ImageLocation { get; set; }
 
     }
 }

@@ -106,5 +106,10 @@ namespace CuCo_POS
             ContainerPage.Instance.panelsContainer.Controls.Add(cashRegisterControl);
             cashRegisterControl.BringToFront();
         }
+
+        private void BodyContainerMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

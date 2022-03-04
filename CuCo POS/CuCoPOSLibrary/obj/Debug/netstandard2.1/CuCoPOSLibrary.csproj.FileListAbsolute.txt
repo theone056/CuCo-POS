@@ -1,0 +1,10 @@
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCoPOSLibrary\bin\Debug\netstandard2.1\CuCoPOSLibrary.deps.json
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCoPOSLibrary\bin\Debug\netstandard2.1\CuCoPOSLibrary.dll
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCoPOSLibrary\bin\Debug\netstandard2.1\CuCoPOSLibrary.pdb
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCoPOSLibrary\obj\Debug\netstandard2.1\CuCoPOSLibrary.csproj.AssemblyReference.cache
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCoPOSLibrary\obj\Debug\netstandard2.1\CuCoPOSLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCoPOSLibrary\obj\Debug\netstandard2.1\CuCoPOSLibrary.AssemblyInfoInputs.cache
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCoPOSLibrary\obj\Debug\netstandard2.1\CuCoPOSLibrary.AssemblyInfo.cs
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCoPOSLibrary\obj\Debug\netstandard2.1\CuCoPOSLibrary.csproj.CoreCompileInputs.cache
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCoPOSLibrary\obj\Debug\netstandard2.1\CuCoPOSLibrary.dll
+D:\Programming Documents\Software Development\CuCo POS\CuCo POS\CuCoPOSLibrary\obj\Debug\netstandard2.1\CuCoPOSLibrary.pdb
