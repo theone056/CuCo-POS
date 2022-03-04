@@ -176,6 +176,7 @@ namespace CuCo_POS
             this.salesRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.salesRegister.Location = new System.Drawing.Point(82, 74);
             this.salesRegister.Name = "salesRegister";
+            this.salesRegister.Padding = new System.Windows.Forms.Padding(0, 0, 0, 300);
             this.salesRegister.Size = new System.Drawing.Size(249, 161);
             this.salesRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.salesRegister.TabIndex = 3;

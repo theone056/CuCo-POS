@@ -47,7 +47,7 @@ namespace CuCo_POS
             this.buttonPrintSlip = new System.Windows.Forms.Button();
             this.buttonCheckOut = new System.Windows.Forms.Button();
             this.totalContainer = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelTotal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.backButtonContainer = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -199,6 +199,7 @@ namespace CuCo_POS
             this.dataGridViewOrderDetails.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewOrderDetails.Size = new System.Drawing.Size(614, 222);
             this.dataGridViewOrderDetails.TabIndex = 0;
+            this.dataGridViewOrderDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrderDetails_CellContentClick);
             // 
             // totalDetailsContainer
             // 
@@ -291,26 +292,26 @@ namespace CuCo_POS
             // 
             this.totalContainer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.totalContainer.Controls.Add(this.label1);
+            this.totalContainer.Controls.Add(this.labelTotal);
             this.totalContainer.Controls.Add(this.label6);
             this.totalContainer.Location = new System.Drawing.Point(0, 0);
             this.totalContainer.Name = "totalContainer";
             this.totalContainer.Size = new System.Drawing.Size(349, 204);
             this.totalContainer.TabIndex = 0;
             // 
-            // label1
+            // labelTotal
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(46)))), ((int)(((byte)(79)))));
-            this.label1.Location = new System.Drawing.Point(0, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(349, 138);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "100,000.00";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.labelTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.labelTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelTotal.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(46)))), ((int)(((byte)(79)))));
+            this.labelTotal.Location = new System.Drawing.Point(0, 66);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(349, 138);
+            this.labelTotal.TabIndex = 6;
+            this.labelTotal.Text = "100,000.00";
+            this.labelTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTotal.Click += new System.EventHandler(this.label1_Click);
             // 
             // label6
             // 
@@ -664,7 +665,7 @@ namespace CuCo_POS
         private System.Windows.Forms.Button buttonCancelOrder;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonNewOrder;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelTotal;
         private System.Windows.Forms.Label label6;
     }
 }

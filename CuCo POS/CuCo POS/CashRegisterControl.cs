@@ -50,13 +50,13 @@ namespace CuCo_POS
                 Label menuPrice = new Label();
                 PictureBox menuPicture = new PictureBox();
 
-
                 menuPicture.BackgroundImage = Properties.Resources.salesregister;
                 menuPicture.Width = 200;
                 menuPicture.Height = 120;
                 menuPicture.Name = allItem[x].MenuName;
                 menuPicture.BackgroundImageLayout = ImageLayout.Stretch;
                 menuPicture.Anchor = (AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right);
+                menuPicture.Tag = allItem[x].MenuPrice;
 
                 menuName.Text = allItem[x].MenuName;
                 menuName.Name = allItem[x].MenuName;
@@ -65,21 +65,23 @@ namespace CuCo_POS
                 menuName.Height = 15;
                 menuName.TextAlign = ContentAlignment.TopCenter;
                 menuName.Location = new Point(0, 120);
+                menuName.Tag = allItem[x].MenuPrice;
 
                 menuPrice.Text = allItem[x].MenuPrice.ToString();
-                menuPrice.Name = allItem[x].MenuName ;
+                menuPrice.Name = allItem[x].MenuName;
                 menuPrice.ForeColor = Color.Black;
                 menuPrice.Width = 200;
                 menuPrice.Height = 15;
                 menuPrice.TextAlign = ContentAlignment.TopCenter;
                 menuPrice.Location = new Point(0, 135);
-
+                menuPrice.Tag = allItem[x].MenuPrice;
 
                 menuItem.Width = 200;
                 menuItem.Height = 160;
                 menuItem.Name = allItem[x].MenuName;
                 menuItem.BackColor = Color.White;
                 menuItem.BorderStyle = BorderStyle.Fixed3D;
+                menuItem.Tag = allItem[x].MenuPrice;
 
                 menuItem.Controls.Add(menuPicture);
                 menuItem.Controls.Add(menuName);
@@ -98,25 +100,50 @@ namespace CuCo_POS
 
         private void MenuFlowLayoutItemClick(object sender, EventArgs a)
         {
-            Control flowLayoutPanel = sender as Control;
-            var row = dataGridViewOrderDetails.Rows.Cast<DataGridViewRow>().Where(c => c.Cells["ItemName"].Value.ToString().Equals(flowLayoutPanel.Name));
+            var flowLayout = sender as Control;
+            double price = Convert.ToDouble(flowLayout.Tag);
+            var row = dataGridViewOrderDetails.Rows.Cast<DataGridViewRow>().Where(c => c.Cells["ItemName"].Value.ToString().Equals(flowLayout.Name));
             int qty = 1;
             if (row.Count() == 0)
             {
-                dataGridViewOrderDetails.Rows.Add(flowLayoutPanel.Name,qty,"100");
+                dataGridViewOrderDetails.Rows.Add(flowLayout.Name, qty, price);
             }
             else
             {
-                qty =Convert.ToInt32(row.First().Cells[1].Value);
+                qty = Convert.ToInt32(row.First().Cells[1].Value);
                 row.First().Cells[1].Value = ++qty;
-                dataGridViewOrderDetails.Refresh();
+                row.First().Cells[2].Value = qty * price;
+               
             }
+            double total = dataGridViewOrderDetails.Rows.Cast<DataGridViewRow>().Sum(c => Convert.ToDouble(c.Cells[2].Value));
+            labelTotal.Text = total.ToString()+".00";
+            dataGridViewOrderDetails.Refresh();
             dataGridViewOrderDetails.ClearSelection();
         }
 
+
+        private void AddDataGridView(string Name, string text)
+        {
+           
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridViewOrderDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 3)
+            {
+                int qty =  Convert.ToInt32(dataGridViewOrderDetails.Rows[e.RowIndex].Cells[1].Value);
+                double price = Convert.ToDouble(dataGridViewOrderDetails.Rows[e.RowIndex].Cells[2].Value);
+                dataGridViewOrderDetails.Rows[e.RowIndex].Cells[1].Value = --qty;
+               // dataGridViewOrderDetails.Rows[e.RowIndex].Cells[2].Value = price * qty;
+                if (qty == 0)
+                {
+                    dataGridViewOrderDetails.Rows.RemoveAt(e.RowIndex);
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

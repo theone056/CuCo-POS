@@ -95,7 +95,7 @@ namespace CuCo_POS
 
         private void logout_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ContainerPage.Instance.Close();
         }
 
      
